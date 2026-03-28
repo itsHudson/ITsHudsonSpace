@@ -1,96 +1,92 @@
-# Programming & Technology
+# 1\. Types of Programming / 编程类型
 
-## 1\. Types of Programming
+| **Type <br>类型**                                  | **What it is (Definition) <br>它是什么（定义）**                                                             | **How it works <br>它如何运作**                                                  | **Used for <br>用来做什么**                             | **Example Languages**<br><br>**示例语言** |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------- |
+| Procedural Programming <br>过程式编程              | A programming style that follows step-by-step instructions <br>一种按照步骤一步一步执行指令的编程方式        | Code runs from top to bottom <br>代码从上到下执行                                | Basic programs, learning logic <br>基础程序，学习逻辑   | C, C++                                    |
+| Object-Oriented Programming (OOP) <br>面向对象编程 | A style that organizes code using objects (data + functions) <br>一种使用对象（数据 + 函数）来组织代码的方式 | Use class and object to represent real things <br>使用类和对象来表示现实中的事物 | Large systems, apps, games <br>大型系统，应用程序，游戏 | Java, C++, C#                             |
+| Structured Programming <br>结构化编程              | A style that uses control structures (if, loop, function) <br>一种使用控制结构（if、循环、函数）的编程方式   | Avoid messy jumps, use clear blocks <br>避免混乱跳转，使用清晰的结构             | Clean and readable programs <br>编写清晰且易读的程序    | C, Pascal                                 |
+| Functional Programming <br>函数式编程              | A style that uses pure functions and avoids changing data <br>一种使用纯函数并避免改变数据的编程方式         | Output depends only on input <br>输出只取决于输入                                | Data processing, math problems <br>数据处理，数学问题   | Haskell, Python                           |
+| Event-Driven Programming <br>事件驱动编程          | A style where code runs when an event happens <br>当事件发生时才执行代码的编程方式                           | Triggered by click, input, or signal <br>由点击、输入或信号触发                  | UI apps, web apps, games <br>界面应用，网页应用，游戏   | JavaScript                                |
+| Logic Programming <br>逻辑编程                     | A style based on rules and facts <br>基于规则和事实的编程方式                                                | Program finds answers using logic rules <br>程序通过逻辑规则找到答案             | AI, problem solving systems <br>人工智能，问题求解系统  | Prolog                                    |
+| Declarative Programming <br>声明式编程             | A style where you state what result you want <br>只说明你想要什么结果的编程方式                              | No need to explain steps <br>不需要说明步骤                                      | Databases, queries <br>数据库，查询                     | SQL                                       |
+| Imperative Programming <br>命令式编程              | A style where you give exact instructions step by step <br>一步一步给出明确指令的编程方式                    | Focus on "how to do" <br>关注"如何做"                                            | General programming <br>通用编程                        | C, Java                                   |
+| Concurrent Programming <br>并发编程                | Multiple tasks run at the same time <br>多个任务同时运行                                                     | Tasks share time on CPU <br>任务共享CPU时间                                      | Servers, real-time systems <br>服务器，实时系统         | Go, Java                                  |
+| Parallel Programming <br>并行编程                  | Tasks run at the same time on multiple processors <br>任务在多个处理器上同时运行                             | Tasks run truly together <br>任务真正同时执行                                    | High-performance computing <br>高性能计算               | C++, CUDA                                 |
+| Scripting Programming <br>脚本编程                 | Writing small programs for automation <br>编写用于自动化的小程序                                             | Usually interpreted, fast to write <br>通常为解释执行，编写快速                  | Automation, web scripting <br>自动化，网页脚本          | Python, JavaScript                        |
+| Generic Programming <br>泛型编程                   | Writing reusable code using templates <br>使用模板编写可复用代码                                             | Code works for many data types <br>代码适用于多种数据类型                        | Libraries, reusable components <br>库，可复用组件       | C++                                       |
+| Modular Programming <br>模块化编程                 | Dividing program into smaller modules <br>将程序分成更小的模块                                               | Each module has one task <br>每个模块负责一个任务                                | Large system development <br>大型系统开发               | C++, Java                                 |
+| Reactive Programming <br>响应式编程                | Program reacts to data changes automatically <br>程序会自动响应数据变化                                      | Data flow triggers updates <br>数据流触发更新                                    | Real-time apps, UI <br>实时应用，界面                   | JavaScript (RxJS)                         |
+| Low-Level Programming <br>低级编程                 | Close to machine and hardware <br>接近机器和硬件                                                             | Direct memory control <br>直接控制内存                                           | OS, drivers <br>操作系统，驱动程序                      | Assembly, C                               |
+| High-Level Programming <br>高级编程                | Easy for humans to read and write <br>易于人类阅读和编写                                                     | Abstracts hardware details <br>抽象硬件细节                                      | Apps, web, AI <br>应用程序，网页，人工智能              | Python, Java                              |
 
-| **Type**                              | **What it is (Definition)**                                  | **How it works (简单理解)**                   | **Used for (做什么)**          | **Example Languages** |
-| ------------------------------------- | ------------------------------------------------------------ | --------------------------------------------- | ------------------------------ | --------------------- |
-| **Procedural Programming**            | A programming style that follows step-by-step instructions   | Code runs from top to bottom                  | Basic programs, learning logic | C, C++                |
-| **Object-Oriented Programming (OOP)** | A style that organizes code using objects (data + functions) | Use class and object to represent real things | Large systems, apps, games     | Java, C++, C#         |
-| **Structured Programming**            | A style that uses control structures (if, loop, function)    | Avoid messy jumps, use clear blocks           | Clean and readable programs    | C, Pascal             |
-| **Functional Programming**            | A style that uses pure functions and avoids changing data    | Output depends only on input                  | Data processing, math problems | Haskell, Python       |
-| **Event-Driven Programming**          | A style where code runs when an event happens                | Triggered by click, input, or signal          | UI apps, web apps, games       | JavaScript            |
-| **Logic Programming**                 | A style based on rules and facts                             | Program finds answers using logic rules       | AI, problem solving systems    | Prolog                |
-| **Declarative Programming**           | A style where you state what result you want                 | No need to explain steps                      | Databases, queries             | SQL                   |
-| **Imperative Programming**            | A style where you give exact instructions step by step       | Focus on "how to do"                          | General programming            | C, Java               |
-| **Concurrent Programming**            | Multiple tasks run at the same time                          | Tasks share time on CPU                       | Servers, real-time systems     | Go, Java              |
-| **Parallel Programming**              | Tasks run at the same time on multiple processors            | Tasks run truly together                      | High-performance computing     | C++, CUDA             |
-| **Scripting Programming**             | Writing small programs for automation                        | Usually interpreted, fast to write            | Automation, web scripting      | Python, JavaScript    |
-| **Generic Programming**               | Writing reusable code using templates                        | Code works for many data types                | Libraries, reusable components | C++                   |
-| **Modular Programming**               | Dividing program into smaller modules                        | Each module has one task                      | Large system development       | C++, Java             |
-| **Reactive Programming**              | Program reacts to data changes automatically                 | Data flow triggers updates                    | Real-time apps, UI             | JavaScript (RxJS)     |
-| **Low-Level Programming**             | Close to machine and hardware                                | Direct memory control                         | OS, drivers                    | Assembly, C           |
-| **High-Level Programming**            | Easy for humans to read and write                            | Abstracts hardware details                    | Apps, web, AI                  | Python, Java          |
+# 2\. Programming Languages / 编程语言
 
-## 2\. Programming Languages
+| **Name <br>名称** | **What it is <br>它是什么**                                                                                                       | **Used for <br>用来做什么**                                                                             | **Type <br>类型**                           | **Suitable for <br>适合谁**                                                   |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------------------------- |
+| C                 | A compiled programming language that provides low-level memory access <br>一种提供低级内存访问的编译型语言                        | Operating systems, embedded systems, device drivers <br>操作系统，嵌入式系统，设备驱动                  | Procedural, Low-level <br>过程式，低级      | Students learning memory, embedded engineers <br>学习内存的学生，嵌入式工程师 |
+| C++               | An extension of C that supports both procedural and object-oriented programming <br>C 的扩展，支持过程式和面向对象编程            | Game development, system software, performance-critical applications <br>游戏开发，系统软件，高性能应用 | Procedural + OOP <br>过程式 + 面向对象      | CS students, system programmers <br>计算机学生，系统程序员                    |
+| C#                | A modern object-oriented language developed by Microsoft <br>微软开发的现代面向对象语言                                           | Desktop apps, web apps (ASP.NET), Unity game development <br>桌面应用，网页应用，Unity 游戏开发         | OOP <br>面向对象                            | .NET developers, game developers <br>.NET 开发者，游戏开发者                  |
+| Java              | A platform-independent object-oriented programming language (runs on JVM) <br>跨平台的面向对象编程语言（运行在 JVM 上）           | Enterprise systems, Android applications <br>企业系统，安卓应用                                         | OOP <br>面向对象                            | Enterprise developers, mobile developers <br>企业开发者，移动开发者           |
+| Python            | An interpreted high-level language with simple syntax <br>具有简单语法的解释型高级语言                                            | Data analysis, AI, automation, scripting <br>数据分析，人工智能，自动化，脚本                           | High-level, Multi-paradigm <br>高级，多范式 | Beginners, data analysts, researchers <br>初学者，数据分析师，研究人员        |
+| JavaScript        | A scripting language executed in web browsers <br>在网页浏览器中执行的脚本语言                                                    | Client-side web interaction, dynamic content <br>客户端网页交互，动态内容                               | Scripting, Event-driven <br>脚本，事件驱动  | Frontend developers <br>前端开发者                                            |
+| TypeScript        | A statically typed superset of JavaScript <br>JavaScript 的静态类型扩展版                                                         | Large-scale web applications with better maintainability <br>大型网页应用，提升可维护性                 | Scripting (typed) <br>脚本（强类型）        | Professional frontend developers <br>专业前端开发者                           |
+| PHP               | A server-side scripting language <br>服务器端脚本语言                                                                             | Backend web development, server processing <br>网页后端开发，服务器处理                                 | Scripting <br>脚本                          | Web backend developers <br>网页后端开发者                                     |
+| Go                | A compiled language designed for concurrency and performance <br>为并发和性能设计的编译型语言                                     | Backend services, cloud infrastructure <br>后端服务，云基础设施                                         | Concurrent, Compiled <br>并发，编译型       | Backend engineers <br>后端工程师                                              |
+| Kotlin            | A modern JVM-based language for Android development <br>基于 JVM 的现代语言，用于安卓开发                                         | Android mobile applications <br>安卓应用                                                                | OOP <br>面向对象                            | Mobile developers <br>移动开发者                                              |
+| Swift             | A compiled language developed by Apple <br>苹果开发的编译型语言                                                                   | iOS and macOS applications <br>iOS 和 macOS 应用                                                        | OOP <br>面向对象                            | iOS developers <br>iOS 开发者                                                 |
+| Rust              | A systems programming language focused on memory safety without garbage collection <br>专注于内存安全且无需垃圾回收的系统编程语言 | System programming, performance-critical applications <br>系统编程，高性能应用                          | Low-level, Safe systems <br>低级，安全系统  | System engineers <br>系统工程师                                               |
 
-| **Name**       | **What it is**                                                                     | **Used for**                                                         | **Type**                   | **Suitable for**                             |
-| -------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------- | -------------------------------------------- |
-| **C**          | A compiled programming language that provides low-level memory access              | Operating systems, embedded systems, device drivers                  | Procedural, Low-level      | Students learning memory, embedded engineers |
-| **C++**        | An extension of C that supports both procedural and object-oriented programming    | Game development, system software, performance-critical applications | Procedural + OOP           | CS students, system programmers              |
-| **C#**         | A modern object-oriented language developed by Microsoft                           | Desktop apps, web apps (ASP.NET), Unity game development             | OOP                        | .NET developers, game developers             |
-| **Java**       | A platform-independent object-oriented programming language (runs on JVM)          | Enterprise systems, Android applications                             | OOP                        | Enterprise developers, mobile developers     |
-| **Python**     | An interpreted high-level language with simple syntax                              | Data analysis, AI, automation, scripting                             | High-level, Multi-paradigm | Beginners, data analysts, researchers        |
-| **JavaScript** | A scripting language executed in web browsers                                      | Client-side web interaction, dynamic content                         | Scripting, Event-driven    | Frontend developers                          |
-| **TypeScript** | A statically typed superset of JavaScript                                          | Large-scale web applications with better maintainability             | Scripting (typed)          | Professional frontend developers             |
-| **PHP**        | A server-side scripting language                                                   | Backend web development, server processing                           | Scripting                  | Web backend developers                       |
-| **Go**         | A compiled language designed for concurrency and performance                       | Backend services, cloud infrastructure                               | Concurrent, Compiled       | Backend engineers                            |
-| **Kotlin**     | A modern JVM-based language for Android development                                | Android mobile applications                                          | OOP                        | Mobile developers                            |
-| **Swift**      | A compiled language developed by Apple                                             | iOS and macOS applications                                           | OOP                        | iOS developers                               |
-| **Rust**       | A systems programming language focused on memory safety without garbage collection | System programming, performance-critical applications                | Low-level, Safe systems    | System engineers                             |
+# 3\. Web Development / 网页开发
 
-## Web Development
+| **Name <br>名称** | **What it is <br>它是什么**                                                                 | **Used for <br>用来做什么**                                                        | **Type <br>类型**            | **Suitable for <br>适合谁**                         |
+| ----------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
+| HTML              | A markup language that defines webpage structure <br>定义网页结构的标记语言                 | Creating webpage layout (text, images, forms) <br>创建网页结构（文本、图片、表单） | Markup Language <br>标记语言 | Beginners, web developers <br>初学者，网页开发者    |
+| CSS               | A stylesheet language used to control presentation of HTML <br>用于控制 HTML 显示样式的语言 | Styling layout, colors, responsiveness <br>样式设计，颜色，响应式布局              | Style Sheet <br>样式表       | UI designers, frontend dev <br>UI设计师，前端开发者 |
+| Bootstrap         | A CSS framework with pre-built components <br>带有预设组件的 CSS 框架                       | Rapid UI development <br>快速界面开发                                              | Framework <br>框架           | Beginners, frontend dev <br>初学者，前端开发者      |
+| SASS              | A CSS preprocessor that adds variables and nesting <br>为 CSS 提供变量和嵌套功能的预处理器  | Maintainable and scalable CSS <br>可维护和可扩展的 CSS                             | Preprocessor <br>预处理器    | Frontend developers <br>前端开发者                  |
+| jQuery            | A JavaScript library that simplifies DOM manipulation <br>简化 DOM 操作的 JavaScript 库     | Simplifying frontend scripting <br>简化前端脚本开发                                | Library <br>库               | Beginners (legacy projects) <br>初学者（旧项目）    |
+| React             | A JavaScript library for building UI components <br>用于构建 UI 组件的 JavaScript 库        | Single-page applications (SPA) <br>单页应用                                        | Library <br>库               | Frontend developers <br>前端开发者                  |
+| Vue               | A progressive JavaScript framework <br>渐进式 JavaScript 框架                               | Interactive web interfaces <br>交互式网页界面                                      | Framework <br>框架           | Frontend developers <br>前端开发者                  |
+| Angular           | A full-featured frontend framework <br>完整功能的前端框架                                   | Large-scale enterprise web apps <br>大型企业网页应用                               | Framework <br>框架           | Advanced developers <br>高级开发者                  |
+| AngularJS         | The older version of Angular <br>Angular 的旧版本                                           | Legacy web applications <br>旧版网页应用                                           | Framework <br>框架           | Maintenance developers <br>维护开发者               |
 
-| **Name**      | **What it is**                                             | **Used for**                                  | **Type**        | **Suitable for**            |
-| ------------- | ---------------------------------------------------------- | --------------------------------------------- | --------------- | --------------------------- |
-| **HTML**      | A markup language that defines webpage structure           | Creating webpage layout (text, images, forms) | Markup Language | Beginners, web developers   |
-| **CSS**       | A stylesheet language used to control presentation of HTML | Styling layout, colors, responsiveness        | Style Sheet     | UI designers, frontend dev  |
-| **Bootstrap** | A CSS framework with pre-built components                  | Rapid UI development                          | Framework       | Beginners, frontend dev     |
-| **SASS**      | A CSS preprocessor that adds variables and nesting         | Maintainable and scalable CSS                 | Preprocessor    | Frontend developers         |
-| **jQuery**    | A JavaScript library that simplifies DOM manipulation      | Simplifying frontend scripting                | Library         | Beginners (legacy projects) |
-| **React**     | A JavaScript library for building UI components            | Single-page applications (SPA)                | Library         | Frontend developers         |
-| **Vue**       | A progressive JavaScript framework                         | Interactive web interfaces                    | Framework       | Frontend developers         |
-| **Angular**   | A full-featured frontend framework                         | Large-scale enterprise web apps               | Framework       | Advanced developers         |
-| **AngularJS** | The older version of Angular                               | Legacy web applications                       | Framework       | Maintenance developers      |
+# 4\. Backend 后端 / Framework 框架
 
-## Backend / Framework
+| **Name <br>名称** | **What it is <br>它是什么**                                                                              | **Used for <br>用来做什么**                          | **Type <br>类型**    | **Suitable for <br>适合谁**          |
+| ----------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- | ------------------------------------ |
+| Node.js           | A JavaScript runtime environment built on Chrome V8 engine <br>基于 Chrome V8 引擎的 JavaScript 运行环境 | Server-side applications, APIs <br>服务器端应用，API | Runtime <br>运行环境 | Full-stack developers <br>全栈开发者 |
+| Django            | A high-level Python web framework <br>高级 Python 网页框架                                               | Backend web development, APIs <br>网页后端开发，API  | Framework <br>框架   | Backend developers <br>后端开发者    |
+| ASP.NET           | A web framework developed by Microsoft <br>微软开发的网页框架                                            | Enterprise web applications <br>企业级网页应用       | Framework <br>框架   | Enterprise developers <br>企业开发者 |
 
-| **Name**    | **What it is**                                             | **Used for**                   | **Type**  | **Suitable for**      |
-| ----------- | ---------------------------------------------------------- | ------------------------------ | --------- | --------------------- |
-| **Node.js** | A JavaScript runtime environment built on Chrome V8 engine | Server-side applications, APIs | Runtime   | Full-stack developers |
-| **Django**  | A high-level Python web framework                          | Backend web development, APIs  | Framework | Backend developers    |
-| **ASP.NET** | A web framework developed by Microsoft                     | Enterprise web applications    | Framework | Enterprise developers |
+# 5\. Database / 数据库
 
-## Database
+| **Name <br>名称** | **What it is <br>它是什么**                                                             | **Used for <br>用来做什么**                                    | **Type <br>类型**              | **Suitable for <br>适合谁**              |
+| ----------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------ | ---------------------------------------- |
+| MySQL             | A relational database management system (RDBMS) <br>关系型数据库管理系统                | Structured data storage <br>结构化数据存储                     | Relational DB <br>关系型数据库 | Beginners, developers <br>初学者，开发者 |
+| PostgreSQL        | An advanced open-source RDBMS with strong standards compliance <br>高级开源关系型数据库 | Complex queries, enterprise systems <br>复杂查询，企业系统     | Relational DB <br>关系型数据库 | Advanced developers <br>高级开发者       |
+| MongoDB           | A NoSQL document database <br>NoSQL 文档数据库                                          | Flexible, unstructured data storage <br>灵活的非结构化数据存储 | NoSQL DB <br>NoSQL数据库       | Modern web apps <br>现代网页应用         |
+| SQL               | A query language for relational databases <br>关系型数据库查询语言                      | Data retrieval, insertion, update <br>数据查询，插入，更新     | Query Language <br>查询语言    | All developers <br>所有开发者            |
 
-| **Name**       | **What it is**                                                 | **Used for**                        | **Type**       | **Suitable for**      |
-| -------------- | -------------------------------------------------------------- | ----------------------------------- | -------------- | --------------------- |
-| **MySQL**      | A relational database management system (RDBMS)                | Structured data storage             | Relational DB  | Beginners, developers |
-| **PostgreSQL** | An advanced open-source RDBMS with strong standards compliance | Complex queries, enterprise systems | Relational DB  | Advanced developers   |
-| **MongoDB**    | A NoSQL document database                                      | Flexible, unstructured data storage | NoSQL DB       | Modern web apps       |
-| **SQL**        | A query language for relational databases                      | Data retrieval, insertion, update   | Query Language | All developers        |
+# 6\. Data & AI / 数据与人工智能
 
-## Data / AI
+| **Name <br>名称** | **What it is <br>它是什么**                                                                | **Used for <br>用来做什么**                           | **Type <br>类型**   | **Suitable for <br>适合谁**            |
+| ----------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------- | ------------------- | -------------------------------------- |
+| R                 | A programming language for statistical computing <br>用于统计计算的编程语言                | Data analysis, visualization <br>数据分析，可视化     | High-level <br>高级 | Data analysts <br>数据分析师           |
+| NumPy             | A Python library for numerical computation <br>Python 数值计算库                           | Matrix operations, arrays <br>矩阵运算，数组          | Library <br>库      | Data science students <br>数据科学学生 |
+| Pandas            | A Python library for data manipulation <br>Python 数据处理库                               | Data cleaning, analysis <br>数据清理，分析            | Library <br>库      | Data analysts <br>数据分析师           |
+| SciPy             | A Python library for scientific computing <br>Python 科学计算库                            | Optimization, scientific models <br>优化，科学模型    | Library <br>库      | Researchers <br>研究人员               |
+| AI                | A field of computer science that simulates human intelligence <br>模拟人类智能的计算机领域 | Automation, prediction systems <br>自动化，预测系统   | Field <br>领域      | AI developers <br>AI开发者             |
+| Gen AI            | A subset of AI that generates content <br>生成内容的 AI 分支                               | Text, image, code generation <br>文本，图像，代码生成 | AI Type <br>AI类型  | Developers <br>开发者                  |
+| Data Science      | A field combining statistics and computing <br>结合统计与计算的领域                        | Data analysis, prediction <br>数据分析，预测          | Field <br>领域      | Data professionals <br>数据专业人员    |
 
-| **Name**         | **What it is**                                                | **Used for**                    | **Type**   | **Suitable for**      |
-| ---------------- | ------------------------------------------------------------- | ------------------------------- | ---------- | --------------------- |
-| **R**            | A programming language for statistical computing              | Data analysis, visualization    | High-level | Data analysts         |
-| **NumPy**        | A Python library for numerical computation                    | Matrix operations, arrays       | Library    | Data science students |
-| **Pandas**       | A Python library for data manipulation                        | Data cleaning, analysis         | Library    | Data analysts         |
-| **SciPy**        | A Python library for scientific computing                     | Optimization, scientific models | Library    | Researchers           |
-| **AI**           | A field of computer science that simulates human intelligence | Automation, prediction systems  | Field      | AI developers         |
-| **Gen AI**       | A subset of AI that generates content                         | Text, image, code generation    | AI Type    | Developers            |
-| **Data Science** | A field combining statistics and computing                    | Data analysis, prediction       | Field      | Data professionals    |
+# 7\. Tools & Others / 工具与其他
 
-## Tools / Others
-
-| **Name**          | **What it is**                                 | **Used for**                  | **Type**       | **Suitable for**      |
-| ----------------- | ---------------------------------------------- | ----------------------------- | -------------- | --------------------- |
-| **Git**           | A distributed version control system           | Tracking code changes         | Tool           | All developers        |
-| **AWS**           | A cloud computing platform                     | Hosting applications, storage | Cloud Platform | Developers, engineers |
-| **Bash**          | A command-line shell                           | System operations, scripting  | Shell          | Linux users           |
-| **Excel**         | A spreadsheet software                         | Data analysis, reporting      | Tool           | General users         |
-| **XML**           | A markup language for data storage             | Data exchange between systems | Markup         | Developers            |
-| **Cybersecurity** | A field focused on protecting systems and data | Security, encryption          | Field          | Security specialists  |
-| **DSA**           | Study of data structures and algorithms        | Efficient problem solving     | Concept        | CS students           |
-
-#
+| **Name <br>名称** | **What it is <br>它是什么**                                             | **Used for <br>用来做什么**                      | **Type <br>类型**         | **Suitable for <br>适合谁**              |
+| ----------------- | ----------------------------------------------------------------------- | ------------------------------------------------ | ------------------------- | ---------------------------------------- |
+| Git               | A distributed version control system <br>分布式版本控制系统             | Tracking code changes <br>追踪代码变更           | Tool <br>工具             | All developers <br>所有开发者            |
+| AWS               | A cloud computing platform <br>云计算平台                               | Hosting applications, storage <br>应用托管，存储 | Cloud Platform <br>云平台 | Developers, engineers <br>开发者，工程师 |
+| Bash              | A command-line shell <br>命令行 Shell                                   | System operations, scripting <br>系统操作，脚本  | Shell <br>终端            | Linux users <br>Linux用户                |
+| Excel             | A spreadsheet software <br>电子表格软件                                 | Data analysis, reporting <br>数据分析，报表      | Tool <br>工具             | General users <br>普通用户               |
+| XML               | A markup language for data storage <br>数据存储标记语言                 | Data exchange between systems <br>系统数据交换   | Markup <br>标记语言       | Developers <br>开发者                    |
+| Cybersecurity     | A field focused on protecting systems and data <br>保护系统和数据的领域 | Security, encryption <br>安全，加密              | Field <br>领域            | Security specialists <br>安全专家        |
+| DSA               | Study of data structures and algorithms <br>数据结构与算法学习          | Efficient problem solving <br>高效解决问题       | Concept <br>概念          | CS students <br>计算机学生               |
