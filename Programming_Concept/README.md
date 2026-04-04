@@ -1,8 +1,21 @@
+!!! before do check with GPT:
+
+is that anything i miss out?:
+and any thing i should split them more detail category?:
+
+
 # Folder Structure
 ```text
 Programming_Concepts/
 
 ├── README.md
+
+├── 0000_Getting_Started/
+│   ├── 0001_Installing_a_Compiler.md
+│   ├── 0002_Your_First_Program.md
+│   ├── 0003_How_to_Run_a_Program.md
+│   ├── 0004_Common_Beginner_Tool_Setup.md
+│   └── 0005_Hello_World_Explained.md
 
 ├── 0001_Introduction_to_Programming/
 │   └── 0001_Fundamentals/
@@ -35,7 +48,11 @@ Programming_Concepts/
 │   │   ├── 0003_Input_Buffer_Issues.md
 │   │   ├── 0004_Formatted_Input.md
 │   │   ├── 0005_Escape_Sequences.md
-│   │   └── 0006_Input_Validation_Basics.md
+│   │   ├── 0006_Input_Validation_Basics.md
+│   │   ├── 0007_Getline_vs_Cin.md
+│   │   ├── 0008_Stream_Manipulators.md
+│   │   ├── 0009_Setw_Setprecision.md
+│   │   └── 0010_Input_Failure_Recovery.md
 │   ├── 0002_Documentation/
 │   │   ├── 0001_Comments.md
 │   │   └── 0002_Documenting_Code.md
@@ -154,17 +171,15 @@ Programming_Concepts/
 │       └── 0006_Enum_Class.md
 
 ├── 0010_Memory_and_Pointers/
-│   ├── 0001_Fundamentals/
+│   ├── 0001_Memory_Basics/
 │   │   ├── 0001_Memory_Addresses.md
 │   │   ├── 0002_Stack_vs_Heap.md
-│   │   ├── 0003_Dynamic_Memory.md
-│   │   ├── 0004_New_and_Delete.md
-│   │   ├── 0005_Memory_Layout_Overview.md
-│   │   └── 0006_RAII.md
+│   │   ├── 0003_Memory_Layout_Overview.md
+│   │   └── 0004_RAII.md
 │   ├── 0002_References/
 │   │   ├── 0001_References.md
 │   │   └── 0002_Reference_vs_Pointer.md
-│   ├── 0003_Pointers/
+│   ├── 0003_Pointer_Basics/
 │   │   ├── 0001_Basic.md
 │   │   ├── 0002_Address_and_Dereference.md
 │   │   ├── 0003_Pointer_Arithmetic.md
@@ -180,14 +195,17 @@ Programming_Concepts/
 │   │   ├── 0013_Array_of_Pointers.md
 │   │   ├── 0014_Function_Pointers.md
 │   │   └── 0015_Pointer_vs_Array.md
-│   ├── 0004_Problems/
-│   │   ├── 0001_Memory_Leaks.md
-│   │   ├── 0002_Common_Mistakes.md
-│   │   ├── 0003_Double_Delete.md
-│   │   ├── 0004_Use_After_Free.md
-│   │   ├── 0005_Null_Pointer_Dereference.md
-│   │   └── 0006_Uninitialized_Pointer.md
-│   └── 0005_Modern_Cpp_Memory/
+│   ├── 0004_Dynamic_Memory/
+│   │   ├── 0001_Dynamic_Memory.md
+│   │   ├── 0002_New_and_Delete.md
+│   │   ├── 0003_Memory_Leaks.md
+│   │   ├── 0004_Double_Delete.md
+│   │   ├── 0005_Use_After_Free.md
+│   │   ├── 0006_Null_Pointer_Dereference.md
+│   │   └── 0007_Uninitialized_Pointer.md
+│   ├── 0005_Common_Problems/
+│   │   └── 0001_Common_Mistakes.md
+│   └── 0006_Modern_Cpp_Memory/
 │       ├── 0001_Smart_Pointers.md
 │       ├── 0002_Unique_Ptr.md
 │       ├── 0003_Shared_Ptr.md
@@ -230,7 +248,9 @@ Programming_Concepts/
 │   │   ├── 0003_Friend_Function_and_Class.md
 │   │   ├── 0004_Setters_and_Getters.md
 │   │   ├── 0005_Static_Members.md
-│   │   └── 0006_Const_Member_Function.md
+│   │   ├── 0006_Const_Member_Function.md
+│   │   ├── 0007_Constructor_Initialization_List.md
+│   │   └── 0008_Mutable_and_Const_Objects.md
 │   ├── 0003_Object_Lifecycle/
 │   │   ├── 0001_Constructors.md
 │   │   ├── 0002_Constructor_Overloading.md
@@ -240,7 +260,8 @@ Programming_Concepts/
 │   │   ├── 0006_Move_Semantics.md
 │   │   ├── 0007_Rule_of_Three.md
 │   │   ├── 0008_Rule_of_Five.md
-│   │   └── 0009_Rule_of_Zero.md
+│   │   ├── 0009_Rule_of_Zero.md
+│   │   └── 0010_Shallow_Copy_vs_Deep_Copy.md
 │   ├── 0004_Inheritance_and_Relationships/
 │   │   ├── 0001_Inheritance.md
 │   │   ├── 0002_Types_of_Inheritance.md
@@ -252,7 +273,8 @@ Programming_Concepts/
 │   │   ├── 0008_Multiple_Inheritance.md
 │   │   ├── 0009_Is_A_vs_Has_A.md
 │   │   ├── 0010_When_to_Use_Inheritance.md
-│   │   └── 0011_When_to_Use_Composition.md
+│   │   ├── 0011_When_to_Use_Composition.md
+│   │   └── 0012_Access_Control_in_Inheritance.md
 │   ├── 0005_Polymorphism/
 │   │   ├── 0001_Function_Overloading.md
 │   │   ├── 0002_Operator_Overloading.md
@@ -264,7 +286,8 @@ Programming_Concepts/
 │   │   ├── 0008_Dynamic_Binding.md
 │   │   └── 0009_Object_Slicing.md
 │   └── 0006_Design_Guidelines/
-│       └── 0001_Interface_Thinking.md
+│       ├── 0001_Interface_Thinking.md
+│       └── 0002_Const_Correctness.md
 
 ├── 0013_Basic_Data_Structures/
 │   ├── 0001_Fundamentals/
@@ -314,7 +337,8 @@ Programming_Concepts/
 │   │   ├── 0002_Selection_Sort.md
 │   │   ├── 0003_Insertion_Sort.md
 │   │   ├── 0004_Merge_Sort.md
-│   │   └── 0005_Quick_Sort.md
+│   │   ├── 0005_Quick_Sort.md
+│   │   └── 0006_Stable_vs_Unstable_Sorting.md
 │   ├── 0004_Strategies/
 │   │   ├── 0001_Greedy_Algorithm.md
 │   │   ├── 0002_Divide_and_Conquer.md
@@ -443,19 +467,22 @@ Programming_Concepts/
 │   │   ├── 0003_Tree_Traversal.md
 │   │   ├── 0004_Binary_Search_Tree_Operations.md
 │   │   ├── 0005_AVL_Tree_Introduction.md
-│   │   └── 0006_Heap_vs_Binary_Search_Tree.md
+│   │   ├── 0006_Heap_vs_Binary_Search_Tree.md
+│   │   └── 0007_Tree_Height_and_Balance.md
 │   ├── 0002_Binary_Search_Tree.md
 │   ├── 0003_Heap.md
 │   ├── 0004_Hash_Tables/
 │   │   ├── 0001_Basic_Hashing.md
-│   │   └── 0002_Collision_Handling.md
+│   │   ├── 0002_Collision_Handling.md
+│   │   └── 0003_Hash_Function_Basics.md
 │   ├── 0005_Graph/
 │   │   ├── 0001_Basic_Graph.md
 │   │   ├── 0002_Types_of_Graphs.md
 │   │   ├── 0003_Breadth_First_Search.md
 │   │   ├── 0004_Depth_First_Search.md
 │   │   ├── 0005_Shortest_Path_Introduction.md
-│   │   └── 0006_Topological_Sort_Introduction.md
+│   │   ├── 0006_Topological_Sort_Introduction.md
+│   │   └── 0007_Adjacency_List_vs_Adjacency_Matrix.md
 │   └── 0006_Comparison/
 │       ├── 0001_BST_vs_Heap.md
 │       ├── 0002_Map_vs_Unordered_Map.md
@@ -548,10 +575,13 @@ Programming_Concepts/
 │   ├── 0002_Utilities/
 │   │   ├── 0001_Pair.md
 │   │   ├── 0002_Auto_Keyword.md
-│   │   └── 0003_Custom_Comparator.md
+│   │   ├── 0003_Custom_Comparator.md
+│   │   ├── 0004_Function_Object_Functor.md
+│   │   └── 0005_Predicate_Basics.md
 │   ├── 0003_Iterators/
 │   │   ├── 0001_Iterator.md
-│   │   └── 0002_Iterator_Categories.md
+│   │   ├── 0002_Iterator_Categories.md
+│   │   └── 0003_Iterator_Invalidation.md
 │   ├── 0004_Algorithms/
 │   │   ├── 0001_Algorithm_Header.md
 │   │   ├── 0002_Sort.md
@@ -577,10 +607,50 @@ Programming_Concepts/
 │   └── 0003_Best_Practices/
 │       └── 0001_Modern_Cpp_Best_Practices.md
 
-└── 0026_Templates/
-    ├── 0001_Function_Templates.md
-    ├── 0002_Class_Templates.md
-    ├── 0003_Template_Specialization.md
-    ├── 0004_Generic_Programming_Basics.md
-    └── 0005_STL_and_Templates_Relationship.md
+├── 0026_Templates/
+│   ├── 0001_Fundamentals/
+│   │   ├── 0001_Function_Templates.md
+│   │   ├── 0002_Class_Templates.md
+│   │   └── 0003_Generic_Programming_Basics.md
+│   └── 0002_Advanced/
+│       ├── 0001_Template_Specialization.md
+│       └── 0002_STL_and_Templates_Relationship.md
+
+└── 0027_Practice_and_Exercises/
+    ├── 0001_Beginner_Problems/
+    │   ├── 0001_Output_Basics.md
+    │   ├── 0002_Variables_and_Input.md
+    │   └── 0003_Simple_Calculations.md
+    ├── 0002_Decision_Problems/
+    │   ├── 0001_If_Problems.md
+    │   ├── 0002_Switch_Problems.md
+    │   └── 0003_Nested_Decision_Problems.md
+    ├── 0003_Loop_Problems/
+    │   ├── 0001_For_Loop_Problems.md
+    │   ├── 0002_While_Loop_Problems.md
+    │   └── 0003_Nested_Loop_Problems.md
+    ├── 0004_Function_Problems/
+    │   ├── 0001_Basic_Function_Problems.md
+    │   ├── 0002_Parameter_and_Return_Problems.md
+    │   └── 0003_Recursion_Problems.md
+    ├── 0005_Array_Problems/
+    │   ├── 0001_Array_Traversal_Problems.md
+    │   ├── 0002_Searching_and_Counting.md
+    │   └── 0003_Array_Manipulation_Problems.md
+    ├── 0006_String_Problems/
+    │   ├── 0001_String_Input_Problems.md
+    │   ├── 0002_String_Traversal_Problems.md
+    │   └── 0003_String_Operation_Problems.md
+    ├── 0007_Pointer_Problems/
+    │   ├── 0001_Basic_Pointer_Problems.md
+    │   ├── 0002_Dynamic_Memory_Problems.md
+    │   └── 0003_Pointer_and_Array_Problems.md
+    ├── 0008_Linked_List_Problems/
+    │   ├── 0001_Singly_Linked_List_Problems.md
+    │   ├── 0002_Doubly_Linked_List_Problems.md
+    │   └── 0003_Linked_List_Tracing.md
+    └── 0009_Algorithm_Tracing_Problems/
+        ├── 0001_Searching_Trace_Problems.md
+        ├── 0002_Sorting_Trace_Problems.md
+        └── 0003_Time_Complexity_Thinking_Problems.md
 ```
