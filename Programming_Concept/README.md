@@ -7,7 +7,10 @@ Programming_Concept/
 
 ├── 0002_Basic_Data_and_Values/
 │   ├── 0001_Variables_(Storing_Data).md
-│   ├── 0002_Data_Types_(Types_of_Data_Values).md
+│   ├── 0002_Data_Types/
+│   │   ├── 0001_Primitive_Data_Types.md
+│   │   ├── 0002_Non-Primitive_Data_Types.md
+│   │   └── 0003_Type_Size_and_Range.md
 │   ├── 0003_Constants_(Fixed_Values).md
 │   └── 0004_Type_Casting_(Converting_Data_Types).md
 
@@ -59,7 +62,10 @@ Programming_Concept/
 
 ├── 0010_Memory_&_Addressing/
 │   ├── 0001_Memory_Addresses_(Where_Data_Is_Stored).md
-│   ├── 0002_Pointers_(Memory_Address_Handling).md
+│   ├── 0002_Pointers/
+│   │   ├── 0001_Basic_Pointers.md
+│   │   ├── 0002_Pointer_and_Array.md
+│   │   └── 0003_Pointer_and_Function.md
 │   ├── 0003_Dynamic_Memory_Allocation_(Heap_Memory_Usage).md
 │   └── 0004_Stack_vs_Heap_(Memory_Areas).md
 
@@ -78,7 +84,10 @@ Programming_Concept/
 │   └── 0006_Abstraction.md
 
 ├── 0013_Data_Structures/
-│   ├── 0001_Linked_Lists_(Dynamic_Data_Structure).md
+│   ├── 0001_Linked_List/
+│   │   ├── 0001_Singly_Linked_List.md
+│   │   ├── 0002_Doubly_Linked_List.md
+│   │   └── 0003_Linked_List_Operations.md
 │   ├── 0002_Stacks_(LIFO_Structure).md
 │   ├── 0003_Queues_(FIFO_Structure).md
 │   └── 0004_Array_vs_Linked_List.md
@@ -94,7 +103,7 @@ Programming_Concept/
 │   │   ├── 0001_Bubble_Sort.md
 │   │   ├── 0002_Selection_Sort.md
 │   │   ├── 0003_Insertion_Sort.md
-│   │   └── 0004_Merge_or_Quick_Sort_(Optional).md
+│   │   └── 0004_Merge_or_Quick_Sort.md
 │   │
 │   ├── 0004_Time_and_Space_Complexity_(Efficiency_of_Code).md
 │   └── 0005_Recursion_vs_Iteration.md
@@ -126,7 +135,10 @@ Programming_Concept/
 │   └── 0004_Code_Readability_&_Best_Practices.md
 
 ├── 0019_Advanced_Data_Structures/
-│   ├── 0001_Trees_(Hierarchical_Data).md
+│   ├── 0001_Trees/
+│   │   ├── 0001_Basic_Tree.md
+│   │   ├── 0002_Binary_Tree.md
+│   │   └── 0003_Tree_Traversal.md
 │   ├── 0002_Binary_Search_Tree_(BST).md
 │   ├── 0003_Heaps_(Priority_Queue).md
 │   ├── 0004_Hash_Tables_(Fast_Lookup).md
@@ -146,6 +158,10 @@ Programming_Concept/
 │   └── 0003_Secure_Coding_Principles.md
 
 └── 0022_Concurrency/
-    ├── 0001_Threads_(Parallel_Execution).md
+    ├── 0001_Threads/
+    │   ├── 0001_Basic_Threads.md
+    │   └── 0002_Thread_Lifecycle.md
     ├── 0002_Race_Conditions.md
-    └── 0003_Synchronization_(Mutex_Locks).md
+    └── 0003_Synchronization/
+        ├── 0001_Mutex_Locks.md
+        └── 0002_Basic_Synchronization_Concepts.md
