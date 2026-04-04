@@ -1,5 +1,5 @@
 # Folder Structure
-```
+```text
 Programming_Concepts/
 
 ├── README.md
@@ -149,9 +149,9 @@ Programming_Concepts/
 │       ├── 0001_Structure.md
 │       ├── 0002_Union.md
 │       ├── 0003_Enumeration.md
-│       ├── 0004_typedef.md
-│       ├── 0005_using_Alias.md
-│       └── 0006_enum_class.md
+│       ├── 0004_Typedef.md
+│       ├── 0005_Using_Alias.md
+│       └── 0006_Enum_Class.md
 
 ├── 0010_Memory_and_Pointers/
 │   ├── 0001_Fundamentals/
@@ -183,12 +183,15 @@ Programming_Concepts/
 │   ├── 0004_Problems/
 │   │   ├── 0001_Memory_Leaks.md
 │   │   ├── 0002_Common_Mistakes.md
-│   │   └── 0003_Double_Delete.md
+│   │   ├── 0003_Double_Delete.md
+│   │   ├── 0004_Use_After_Free.md
+│   │   ├── 0005_Null_Pointer_Dereference.md
+│   │   └── 0006_Uninitialized_Pointer.md
 │   └── 0005_Modern_Cpp_Memory/
 │       ├── 0001_Smart_Pointers.md
-│       ├── 0002_unique_ptr.md
-│       ├── 0003_shared_ptr.md
-│       └── 0004_weak_ptr.md
+│       ├── 0002_Unique_Ptr.md
+│       ├── 0003_Shared_Ptr.md
+│       └── 0004_Weak_Ptr.md
 
 ├── 0011_File_Handling_and_Program_Organization/
 │   ├── 0001_File_Handling/
@@ -234,7 +237,10 @@ Programming_Concepts/
 │   │   ├── 0003_Destructors.md
 │   │   ├── 0004_Copy_Constructor.md
 │   │   ├── 0005_Copy_Assignment_Operator.md
-│   │   └── 0006_Move_Semantics.md
+│   │   ├── 0006_Move_Semantics.md
+│   │   ├── 0007_Rule_of_Three.md
+│   │   ├── 0008_Rule_of_Five.md
+│   │   └── 0009_Rule_of_Zero.md
 │   ├── 0004_Inheritance_and_Relationships/
 │   │   ├── 0001_Inheritance.md
 │   │   ├── 0002_Types_of_Inheritance.md
@@ -254,7 +260,9 @@ Programming_Concepts/
 │   │   ├── 0004_Abstract_Class.md
 │   │   ├── 0005_Compile_Time_vs_Runtime_Polymorphism.md
 │   │   ├── 0006_Pure_Virtual_Function.md
-│   │   └── 0007_Virtual_Destructor.md
+│   │   ├── 0007_Virtual_Destructor.md
+│   │   ├── 0008_Dynamic_Binding.md
+│   │   └── 0009_Object_Slicing.md
 │   └── 0006_Design_Guidelines/
 │       └── 0001_Interface_Thinking.md
 
@@ -315,12 +323,20 @@ Programming_Concepts/
 │   ├── 0005_Analysis/
 │   │   ├── 0001_Big_O_Notation.md
 │   │   └── 0002_Best_Worst_and_Average_Case.md
-│   └── 0006_Problem_Patterns/
-│       ├── 0001_Two_Pointers.md
-│       ├── 0002_Sliding_Window.md
-│       ├── 0003_Prefix_Sum.md
-│       ├── 0004_Binary_Search_on_Answer.md
-│       └── 0005_Recursion_Tree_Basics.md
+│   ├── 0006_Problem_Patterns/
+│   │   ├── 0001_Two_Pointers.md
+│   │   ├── 0002_Sliding_Window.md
+│   │   ├── 0003_Prefix_Sum.md
+│   │   ├── 0004_Binary_Search_on_Answer.md
+│   │   ├── 0005_Recursion_Tree_Basics.md
+│   │   ├── 0006_Frequency_Counting.md
+│   │   ├── 0007_Hashing_for_Lookups.md
+│   │   └── 0008_Simulation.md
+│   └── 0007_Basic_Math_Tools/
+│       ├── 0001_Prime_Check_Basics.md
+│       ├── 0002_GCD_and_LCM.md
+│       ├── 0003_Modular_Arithmetic_Basics.md
+│       └── 0004_Powers_and_Logarithms_in_Algorithms.md
 
 ├── 0015_Number_Systems_and_Data_Representation/
 │   ├── 0001_Fundamentals/
@@ -392,7 +408,11 @@ Programming_Concepts/
 │       ├── 0003_Throw.md
 │       ├── 0004_Input_Validation.md
 │       ├── 0005_Defensive_Programming.md
-│       └── 0006_Exception_Safety_Basics.md
+│       ├── 0006_Exception_Safety_Basics.md
+│       ├── 0007_Stack_Unwinding.md
+│       ├── 0008_When_to_Use_Exceptions.md
+│       ├── 0009_When_Not_to_Use_Exceptions.md
+│       └── 0010_Custom_Exceptions.md
 
 ├── 0018_Program_Design/
 │   ├── 0001_Fundamentals/
@@ -495,50 +515,72 @@ Programming_Concepts/
 │       └── 0006_Read_Write_Locks.md
 
 ├── 0023_Computer_Fundamentals/
-│   ├── 0001_How_Code_Becomes_a_Program.md
-│   ├── 0002_CPU_Memory_and_Storage.md
-│   ├── 0003_Compiler_Interpreter_and_Assembler.md
-│   ├── 0004_Source_Code_to_Executable.md
-│   ├── 0005_Basic_Operating_System_Role.md
-│   ├── 0006_Command_Line_Basics.md
-│   ├── 0007_Process_vs_Thread.md
-│   ├── 0008_RAM_vs_ROM.md
-│   ├── 0009_System_Calls_Basics.md
-│   ├── 0010_Instruction_Cycle.md
-│   ├── 0011_Machine_Code_vs_Assembly_vs_High_Level_Code.md
-│   ├── 0012_Register_Basics.md
-│   └── 0013_Memory_Addressing_Basics.md
+│   ├── 0001_How_Programs_Run/
+│   │   ├── 0001_How_Code_Becomes_a_Program.md
+│   │   ├── 0002_Source_Code_to_Executable.md
+│   │   ├── 0003_Compiler_Interpreter_and_Assembler.md
+│   │   └── 0004_Machine_Code_vs_Assembly_vs_High_Level_Code.md
+│   ├── 0002_Computer_Architecture_Basics/
+│   │   ├── 0001_CPU_Memory_and_Storage.md
+│   │   ├── 0002_Instruction_Cycle.md
+│   │   ├── 0003_Register_Basics.md
+│   │   └── 0004_Memory_Addressing_Basics.md
+│   ├── 0003_Operating_System_Basics/
+│   │   ├── 0001_Basic_Operating_System_Role.md
+│   │   ├── 0002_System_Calls_Basics.md
+│   │   ├── 0003_Process_vs_Thread.md
+│   │   └── 0004_RAM_vs_ROM.md
+│   └── 0004_Command_Line/
+│       └── 0001_Command_Line_Basics.md
 
 ├── 0024_Cpp_Standard_Library/
-│   ├── 0001_string.md
-│   ├── 0002_vector.md
-│   ├── 0003_pair.md
-│   ├── 0004_map.md
-│   ├── 0005_set.md
-│   ├── 0006_iterator.md
-│   ├── 0007_algorithm_header.md
-│   ├── 0008_auto_keyword.md
-│   ├── 0009_unordered_map.md
-│   ├── 0010_unordered_set.md
-│   ├── 0011_list.md
-│   ├── 0012_deque.md
-│   ├── 0013_stack.md
-│   ├── 0014_queue.md
-│   ├── 0015_priority_queue.md
-│   ├── 0016_sort.md
-│   ├── 0017_find.md
-│   ├── 0018_count.md
-│   ├── 0019_binary_search.md
-│   └── 0020_custom_comparator.md
+│   ├── 0001_Containers/
+│   │   ├── 0001_Vector.md
+│   │   ├── 0002_List.md
+│   │   ├── 0003_Deque.md
+│   │   ├── 0004_Stack.md
+│   │   ├── 0005_Queue.md
+│   │   ├── 0006_Priority_Queue.md
+│   │   ├── 0007_Set.md
+│   │   ├── 0008_Map.md
+│   │   ├── 0009_Unordered_Set.md
+│   │   └── 0010_Unordered_Map.md
+│   ├── 0002_Utilities/
+│   │   ├── 0001_Pair.md
+│   │   ├── 0002_Auto_Keyword.md
+│   │   └── 0003_Custom_Comparator.md
+│   ├── 0003_Iterators/
+│   │   ├── 0001_Iterator.md
+│   │   └── 0002_Iterator_Categories.md
+│   ├── 0004_Algorithms/
+│   │   ├── 0001_Algorithm_Header.md
+│   │   ├── 0002_Sort.md
+│   │   ├── 0003_Find.md
+│   │   ├── 0004_Count.md
+│   │   ├── 0005_Binary_Search.md
+│   │   └── 0006_Lower_Bound_and_Upper_Bound.md
+│   └── 0005_Strings/
+│       └── 0001_String.md
 
-└── 0025_Modern_Cpp/
-    ├── 0001_const.md
-    ├── 0002_references.md
-    ├── 0003_auto.md
-    ├── 0004_range_based_for.md
-    ├── 0005_enum_class.md
-    ├── 0006_lambda_basics.md
-    ├── 0007_move_vs_copy.md
-    ├── 0008_raii.md
-    ├── 0009_smart_pointers_usage.md
-    └── 0010_modern_cpp_best_practices.md
+├── 0025_Modern_Cpp/
+│   ├── 0001_Core_Features/
+│   │   ├── 0001_Const.md
+│   │   ├── 0002_References.md
+│   │   ├── 0003_Auto.md
+│   │   ├── 0004_Range_Based_For.md
+│   │   ├── 0005_Enum_Class.md
+│   │   └── 0006_Lambda_Basics.md
+│   ├── 0002_Resource_Management/
+│   │   ├── 0001_Move_vs_Copy.md
+│   │   ├── 0002_RAII.md
+│   │   └── 0003_Smart_Pointers_Usage.md
+│   └── 0003_Best_Practices/
+│       └── 0001_Modern_Cpp_Best_Practices.md
+
+└── 0026_Templates/
+    ├── 0001_Function_Templates.md
+    ├── 0002_Class_Templates.md
+    ├── 0003_Template_Specialization.md
+    ├── 0004_Generic_Programming_Basics.md
+    └── 0005_STL_and_Templates_Relationship.md
+```
