@@ -79,6 +79,41 @@ Programming_Concept/
 │   ├── 0003_Decimal_Numbers_(Base-10_System).md
 │   └── 0004_Hexadecimal_Numbers_(Base-16_System).md
 
-└── 0016_Debugging_&_Testing/
-    ├── 0001_Debugging_(Finding_and_Fixing_Errors).md
-    └── 0002_Testing_(Checking_Program_Correctness).md
+├── 0016_Debugging_&_Testing/
+│   ├── 0001_Debugging_(Finding_and_Fixing_Errors).md
+│   └── 0002_Testing_(Checking_Program_Correctness).md
+
+├── 0017_Error_Handling/
+│   ├── 0001_Runtime_Errors_(Program_Crash_Handling).md
+│   ├── 0002_Exception_Handling_(try_catch_concepts).md
+│   └── 0003_Input_Validation_(Preventing_Invalid_Data).md
+
+├── 0018_Program_Design/
+│   ├── 0001_Pseudocode_(Planning_Code).md
+│   ├── 0002_Flowcharts_(Visual_Program_Logic).md
+│   ├── 0003_Structured_Programming_(Top-Down_Design).md
+│   └── 0004_Code_Readability_&_Best_Practices.md
+
+├── 0019_Advanced_Data_Structures/
+│   ├── 0001_Trees_(Hierarchical_Data).md
+│   ├── 0002_Binary_Search_Tree_(BST).md
+│   ├── 0003_Heaps_(Priority_Queue).md
+│   ├── 0004_Hash_Tables_(Fast_Lookup).md
+│   └── 0005_Graphs_(Network_Representation).md
+
+├── 0020_Software_Development/
+│   ├── 0001_Version_Control_(Git_Basics).md
+│   ├── 0002_Code_Compilation_vs_Interpretation.md
+│   ├── 0003_Build_Process_(Compile_Link_Run).md
+│   ├── 0004_Basic_Software_Lifecycle_(SDLC).md
+│   └── 0005_Code_Review_&_Collaboration.md
+
+├── 0021_Basic_Security/
+│   ├── 0001_Input_Sanitization.md
+│   ├── 0002_Buffer_Overflow_(Basic_Concept).md
+│   └── 0003_Secure_Coding_Principles.md
+
+└── 0022_Concurrency/
+    ├── 0001_Threads_(Parallel_Execution).md
+    ├── 0002_Race_Conditions.md
+    └── 0003_Synchronization_(Mutex_Locks).md
