@@ -150,7 +150,8 @@ Programming_Concepts/
 │       ├── 0002_Union.md
 │       ├── 0003_Enumeration.md
 │       ├── 0004_typedef.md
-│       └── 0005_using_Alias.md
+│       ├── 0005_using_Alias.md
+│       └── 0006_enum_class.md
 
 ├── 0010_Memory_and_Pointers/
 │   ├── 0001_Fundamentals/
@@ -158,7 +159,8 @@ Programming_Concepts/
 │   │   ├── 0002_Stack_vs_Heap.md
 │   │   ├── 0003_Dynamic_Memory.md
 │   │   ├── 0004_New_and_Delete.md
-│   │   └── 0005_Memory_Layout_Overview.md
+│   │   ├── 0005_Memory_Layout_Overview.md
+│   │   └── 0006_RAII.md
 │   ├── 0002_References/
 │   │   ├── 0001_References.md
 │   │   └── 0002_Reference_vs_Pointer.md
@@ -241,15 +243,20 @@ Programming_Concepts/
 │   │   ├── 0005_Association.md
 │   │   ├── 0006_Aggregation.md
 │   │   ├── 0007_Object_Relationships.md
-│   │   └── 0008_Multiple_Inheritance.md
-│   └── 0005_Polymorphism/
-│       ├── 0001_Function_Overloading.md
-│       ├── 0002_Operator_Overloading.md
-│       ├── 0003_Virtual_Functions.md
-│       ├── 0004_Abstract_Class.md
-│       ├── 0005_Compile_Time_vs_Runtime_Polymorphism.md
-│       ├── 0006_Pure_Virtual_Function.md
-│       └── 0007_Virtual_Destructor.md
+│   │   ├── 0008_Multiple_Inheritance.md
+│   │   ├── 0009_Is_A_vs_Has_A.md
+│   │   ├── 0010_When_to_Use_Inheritance.md
+│   │   └── 0011_When_to_Use_Composition.md
+│   ├── 0005_Polymorphism/
+│   │   ├── 0001_Function_Overloading.md
+│   │   ├── 0002_Operator_Overloading.md
+│   │   ├── 0003_Virtual_Functions.md
+│   │   ├── 0004_Abstract_Class.md
+│   │   ├── 0005_Compile_Time_vs_Runtime_Polymorphism.md
+│   │   ├── 0006_Pure_Virtual_Function.md
+│   │   └── 0007_Virtual_Destructor.md
+│   └── 0006_Design_Guidelines/
+│       └── 0001_Interface_Thinking.md
 
 ├── 0013_Basic_Data_Structures/
 │   ├── 0001_Fundamentals/
@@ -277,6 +284,10 @@ Programming_Concepts/
 │   │   │   └── 0005_Linked_List_Based_Queue.md
 │   │   ├── 0005_Deque.md
 │   │   └── 0006_Priority_Queue.md
+│   └── 0003_Comparison/
+│       ├── 0001_Array_vs_Vector.md
+│       ├── 0002_Stack_vs_Queue.md
+│       └── 0003_Static_vs_Dynamic_Memory_Usage.md
 
 ├── 0014_Algorithms_and_Problem_Solving/
 │   ├── 0001_Fundamentals/
@@ -301,9 +312,15 @@ Programming_Concepts/
 │   │   ├── 0002_Divide_and_Conquer.md
 │   │   ├── 0003_Backtracking.md
 │   │   └── 0004_Dynamic_Programming_Introduction.md
-│   └── 0005_Analysis/
-│       ├── 0001_Big_O_Notation.md
-│       └── 0002_Best_Worst_and_Average_Case.md
+│   ├── 0005_Analysis/
+│   │   ├── 0001_Big_O_Notation.md
+│   │   └── 0002_Best_Worst_and_Average_Case.md
+│   └── 0006_Problem_Patterns/
+│       ├── 0001_Two_Pointers.md
+│       ├── 0002_Sliding_Window.md
+│       ├── 0003_Prefix_Sum.md
+│       ├── 0004_Binary_Search_on_Answer.md
+│       └── 0005_Recursion_Tree_Basics.md
 
 ├── 0015_Number_Systems_and_Data_Representation/
 │   ├── 0001_Fundamentals/
@@ -350,11 +367,16 @@ Programming_Concepts/
 │   │   ├── 0002_Dry_Run.md
 │   │   ├── 0003_Test_Cases.md
 │   │   └── 0004_Breakpoints.md
-│   └── 0002_Testing/
-│       ├── 0001_Unit_Testing.md
-│       ├── 0002_Assertions.md
-│       ├── 0003_Boundary_Value_Testing.md
-│       └── 0004_Normal_and_Edge_Cases.md
+│   ├── 0002_Testing/
+│   │   ├── 0001_Unit_Testing.md
+│   │   ├── 0002_Assertions.md
+│   │   ├── 0003_Boundary_Value_Testing.md
+│   │   └── 0004_Normal_and_Edge_Cases.md
+│   └── 0003_Test_Design/
+│       ├── 0001_Happy_Path.md
+│       ├── 0002_Edge_Cases.md
+│       ├── 0003_Invalid_Input_Cases.md
+│       └── 0004_Test_Case_Thinking.md
 
 ├── 0017_Errors_and_Exception_Handling/
 │   ├── 0001_Types_of_Errors/
@@ -377,16 +399,22 @@ Programming_Concepts/
 │   │   ├── 0001_Pseudocode.md
 │   │   ├── 0002_Flowcharts.md
 │   │   └── 0003_Structured_Programming.md
-│   └── 0002_Design_Principles/
-│       ├── 0001_Problem_Decomposition.md
-│       ├── 0002_Top_Down_vs_Bottom_Up.md
-│       ├── 0003_Code_Readability.md
-│       ├── 0004_Modular_Design.md
-│       ├── 0005_Stepwise_Refinement.md
-│       ├── 0006_Cohesion_and_Coupling.md
-│       ├── 0007_Single_Responsibility_Idea.md
-│       ├── 0008_Separation_of_Concerns.md
-│       └── 0009_Reusability.md
+│   ├── 0002_Design_Principles/
+│   │   ├── 0001_Problem_Decomposition.md
+│   │   ├── 0002_Top_Down_vs_Bottom_Up.md
+│   │   ├── 0003_Code_Readability.md
+│   │   ├── 0004_Modular_Design.md
+│   │   ├── 0005_Stepwise_Refinement.md
+│   │   ├── 0006_Cohesion_and_Coupling.md
+│   │   ├── 0007_Single_Responsibility_Idea.md
+│   │   ├── 0008_Separation_of_Concerns.md
+│   │   └── 0009_Reusability.md
+│   └── 0003_Problem_Solving_Workflow/
+│       ├── 0001_Understand_the_Problem.md
+│       ├── 0002_Break_the_Problem_Down.md
+│       ├── 0003_Design_Before_Code.md
+│       ├── 0004_Test_with_Sample_Input.md
+│       └── 0005_Refine_and_Improve.md
 
 ├── 0019_Advanced_Data_Structures/
 │   ├── 0001_Trees/
@@ -401,13 +429,17 @@ Programming_Concepts/
 │   ├── 0004_Hash_Tables/
 │   │   ├── 0001_Basic_Hashing.md
 │   │   └── 0002_Collision_Handling.md
-│   └── 0005_Graph/
-│       ├── 0001_Basic_Graph.md
-│       ├── 0002_Types_of_Graphs.md
-│       ├── 0003_Breadth_First_Search.md
-│       ├── 0004_Depth_First_Search.md
-│       ├── 0005_Shortest_Path_Introduction.md
-│       └── 0006_Topological_Sort_Introduction.md
+│   ├── 0005_Graph/
+│   │   ├── 0001_Basic_Graph.md
+│   │   ├── 0002_Types_of_Graphs.md
+│   │   ├── 0003_Breadth_First_Search.md
+│   │   ├── 0004_Depth_First_Search.md
+│   │   ├── 0005_Shortest_Path_Introduction.md
+│   │   └── 0006_Topological_Sort_Introduction.md
+│   └── 0006_Comparison/
+│       ├── 0001_BST_vs_Heap.md
+│       ├── 0002_Map_vs_Unordered_Map.md
+│       └── 0003_DFS_vs_BFS.md
 
 ├── 0020_Software_Development/
 │   ├── 0001_Fundamentals/
@@ -422,10 +454,15 @@ Programming_Concepts/
 │   │   ├── 0004_Linker.md
 │   │   ├── 0005_Loader.md
 │   │   └── 0006_Static_vs_Dynamic_Libraries.md
-│   └── 0003_Tools/
-│       ├── 0001_Command_Line.md
-│       ├── 0002_Integrated_Development_Environment.md
-│       └── 0003_Debugger.md
+│   ├── 0003_Tools/
+│   │   ├── 0001_Command_Line.md
+│   │   ├── 0002_Integrated_Development_Environment.md
+│   │   └── 0003_Debugger.md
+│   └── 0004_Project_Workflow/
+│       ├── 0001_Project_Folder_Structure.md
+│       ├── 0002_Build_Errors_vs_Runtime_Errors.md
+│       ├── 0003_Debugging_Workflow.md
+│       └── 0004_Readme_and_Documentation_Basics.md
 
 ├── 0021_Basic_Security/
 │   ├── 0001_Fundamentals/
@@ -466,14 +503,42 @@ Programming_Concepts/
 │   ├── 0006_Command_Line_Basics.md
 │   ├── 0007_Process_vs_Thread.md
 │   ├── 0008_RAM_vs_ROM.md
-│   └── 0009_System_Calls_Basics.md
+│   ├── 0009_System_Calls_Basics.md
+│   ├── 0010_Instruction_Cycle.md
+│   ├── 0011_Machine_Code_vs_Assembly_vs_High_Level_Code.md
+│   ├── 0012_Register_Basics.md
+│   └── 0013_Memory_Addressing_Basics.md
 
-└── 0024_Cpp_Standard_Library/
-    ├── 0001_string.md
-    ├── 0002_vector.md
-    ├── 0003_pair.md
-    ├── 0004_map.md
-    ├── 0005_set.md
-    ├── 0006_iterator.md
-    ├── 0007_algorithm_header.md
-    └── 0008_auto_keyword.md
+├── 0024_Cpp_Standard_Library/
+│   ├── 0001_string.md
+│   ├── 0002_vector.md
+│   ├── 0003_pair.md
+│   ├── 0004_map.md
+│   ├── 0005_set.md
+│   ├── 0006_iterator.md
+│   ├── 0007_algorithm_header.md
+│   ├── 0008_auto_keyword.md
+│   ├── 0009_unordered_map.md
+│   ├── 0010_unordered_set.md
+│   ├── 0011_list.md
+│   ├── 0012_deque.md
+│   ├── 0013_stack.md
+│   ├── 0014_queue.md
+│   ├── 0015_priority_queue.md
+│   ├── 0016_sort.md
+│   ├── 0017_find.md
+│   ├── 0018_count.md
+│   ├── 0019_binary_search.md
+│   └── 0020_custom_comparator.md
+
+└── 0025_Modern_Cpp/
+    ├── 0001_const.md
+    ├── 0002_references.md
+    ├── 0003_auto.md
+    ├── 0004_range_based_for.md
+    ├── 0005_enum_class.md
+    ├── 0006_lambda_basics.md
+    ├── 0007_move_vs_copy.md
+    ├── 0008_raii.md
+    ├── 0009_smart_pointers_usage.md
+    └── 0010_modern_cpp_best_practices.md
