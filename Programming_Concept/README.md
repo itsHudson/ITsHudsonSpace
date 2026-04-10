@@ -10,19 +10,7 @@ Programming_Concepts/
 
 ├── README.md
 
-├── 0000_Getting_Started/
-│   ├── 0001_Installing_a_Compiler.md
-│   ├── 0002_Your_First_Program.md
-│   ├── 0003_How_to_Run_a_Program.md
-│   ├── 0004_Common_Beginner_Tool_Setup.md
-│   └── 0005_Hello_World_Explained.md
-
-├── 0001_Introduction_to_Programming/
-│   └── 0001_Fundamentals/
-│       ├── 0001_What_is_Programming.md
-│       ├── 0002_How_a_Program_Works.md
-│       ├── 0003_Programming_Languages_Overview.md
-│       └── 0004_Compilation_vs_Interpretation.md
+├── 0001_Programming_Languages_Overview
 
 ├── 0002_Basic_Data_and_Values/
 │   ├── 0001_Fundamentals/
