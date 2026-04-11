@@ -1,5 +1,4 @@
-Python_A_to_Z/
-
+```text
 ├── README.md
 
 ├── 0001_Python_Introduction_and_Setup/
