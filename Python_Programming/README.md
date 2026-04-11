@@ -1,6 +1,4 @@
 ```text
-Python_A_to_Z_Master/
-
 ├── README.md
 
 ├── 0000_Foundation_and_Learning_Guide/
