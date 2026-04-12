@@ -182,13 +182,12 @@ else:
 
 ## What this practice is doing / 这个练习实际上在训练什么
 
-| **Type**<br><br>**类型** | **Core Idea**<br><br>**核心概念** | **How it works**<br><br>**它如何运作** | **Usage / Example**<br><br>**用途 / 例子** |
-|---|---|---|---|
-| **Practice Layer 练习层** | **English** | **中文** |  |
-| 1 | You first learn the basic if-else shape. | 你先学最基础的 if-else 结构。 |  |
-| 2 | Then you modify the logic to prove you understand branching. | 然后你改逻辑，证明你理解了分支判断。 |  |
-| 3 | Then you add real input, which makes the program interactive. | 接着你加入真实输入，让程序变成可交互。 |  |
-| 4 | Now you are no longer just copying; you are using the concept. | 到这里你已经不只是抄，而是在真正使用这个概念。 |  |
+| **Practice Layer 练习层** | **English** | **中文** |
+| --- | --- | --- |
+| 1 | You first learn the basic if-else shape. | 你先学最基础的 if-else 结构。 |
+| 2 | Then you modify the logic to prove you understand branching. | 然后你改逻辑，证明你理解了分支判断。 |
+| 3 | Then you add real input, which makes the program interactive. | 接着你加入真实输入，让程序变成可交互。 |
+| 4 | Now you are no longer just copying; you are using the concept. | 到这里你已经不只是抄，而是在真正使用这个概念。 |
 
 # 17\. Complete Practical Example 2 / 完整实际例子 2
 
