@@ -141,16 +141,17 @@
 
 ## Topic / 主题：Practicing if effectively / 有效练 if
 
-Step A: Re-type the basic example / 重打基础例子
-
+### Step A: Re-type the basic example / 重打基础例子
+```python
 score = 75  
 if score >= 50:  
     print("Pass")  
 else:  
     print("Fail")
+```
 
-Step B: Modify it / 修改它
-
+### Step B: Modify it / 修改它
+```python
 score = 75  
 if score >= 80:  
     print("Excellent")  
@@ -158,9 +159,10 @@ elif score >= 50:
     print("Pass")  
 else:  
     print("Fail")
+```
 
-Step C: Build a tiny task / 做一个小任务
-
+### Step C: Build a tiny task / 做一个小任务
+```python
 score = int(input("Enter your score: "))  
 if score >= 80:  
     print("Excellent")  
@@ -168,6 +170,7 @@ elif score >= 50:
     print("Pass")  
 else:  
     print("Fail")
+```
 
 ## What this practice is doing / 这个练习在训练什么
 
@@ -182,27 +185,31 @@ else:
 
 ## Topic / 主题：Practicing loops effectively / 有效练循环
 
-Step A: Basic example / 基础例子
-
+### Step A: Basic example / 基础例子
+```python
 for i in range(5):  
     print(i)
+```
 
-Step B: Modify it / 修改它
-
+### Step B: Modify it / 修改它
+```python
 for i in range(1, 6):  
     print(i)
+```
 
-Step C: Another variation / 再做一个变化
-
+### Step C: Another variation / 再做一个变化
+```python
 for i in range(2, 11, 2):  
     print(i)
+```
 
-Step D: Small task / 小任务
-
+### Step D: Small task / 小任务
+```python
 total = 0  
 for i in range(1, 6):  
     total += i  
 print("Total:", total)
+```
 
 ## What this practice is doing / 训练内容
 
@@ -216,7 +223,7 @@ print("Total:", total)
 # 18\. Complete Practical Example 3 / 完整实际例子 3
 
 ## Topic / 主题：Mini-project / 小项目
-
+```python
 numbers = []  
 count = int(input("How many numbers? "))  
 
@@ -230,6 +237,7 @@ average = total / len(numbers)
 print("Numbers:", numbers)  
 print("Total:", total)  
 print("Average:", average)
+```
 
 ## Why this matters / 为什么重要
 
