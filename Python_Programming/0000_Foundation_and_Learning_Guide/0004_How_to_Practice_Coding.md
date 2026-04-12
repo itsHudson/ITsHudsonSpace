@@ -139,20 +139,26 @@
 
 # 16\. Complete Practical Example 1 / 完整实际例子 1
 
-## Topic / 主题：Practicing if effectively / 有效练 if
+## Topic: Practicing if effectively / 主题：怎样有效练 if
 
-### Step A: Re-type the basic example / 重打基础例子
+**Step A: Re-type the basic example / 重打基础例子**
 ```python
-score = 75  
+score = 75
+
 if score >= 50:  
     print("Pass")  
 else:  
     print("Fail")
 ```
 
-### Step B: Modify it / 修改它
+**Step B: Modify it / 修改它**
+把规则改成：
+- 80 以上 = Excellent  
+- 50 到 79 = Pass  
+- 50 以下 = Fail  
 ```python
-score = 75  
+score = 75
+
 if score >= 80:  
     print("Excellent")  
 elif score >= 50:  
@@ -161,9 +167,11 @@ else:
     print("Fail")
 ```
 
-### Step C: Build a tiny task / 做一个小任务
+**Step C: Build a tiny task / 做一个小任务**
+让用户输入分数：
 ```python
-score = int(input("Enter your score: "))  
+score = int(input("Enter your score: "))
+
 if score >= 80:  
     print("Excellent")  
 elif score >= 50:  
@@ -172,63 +180,71 @@ else:
     print("Fail")
 ```
 
-## What this practice is doing / 这个练习在训练什么
+## What this practice is doing / 这个练习实际上在训练什么
 
 | **Type**<br><br>**类型** | **Core Idea**<br><br>**核心概念** | **How it works**<br><br>**它如何运作** | **Usage / Example**<br><br>**用途 / 例子** |
 |---|---|---|---|
-| **Basic Structure**<br><br>**基础结构** | Learn the shape of if-else.<br><br>学习结构。 | Understand decision flow.<br><br>理解判断流程。 | Two outcomes decision.<br><br>二分判断。 |
-| **Logic Expansion**<br><br>**逻辑扩展** | Add more branches.<br><br>增加分支。 | Use elif to extend logic.<br><br>用 elif 扩展。 | Multi-condition grading.<br><br>多条件判断。 |
-| **Input Integration**<br><br>**输入整合** | Use real input.<br><br>使用真实输入。 | Program reacts dynamically.<br><br>程序动态运行。 | Interactive scoring.<br><br>互动判断。 |
-| **Independent Use**<br><br>**独立应用** | Move beyond copying.<br><br>不再依赖抄。 | Apply concept flexibly.<br><br>灵活使用。 | Build own variations.<br><br>自己扩展。 |
+| **Practice Layer 练习层** | **English** | **中文** |  |
+| 1 | You first learn the basic if-else shape. | 你先学最基础的 if-else 结构。 |  |
+| 2 | Then you modify the logic to prove you understand branching. | 然后你改逻辑，证明你理解了分支判断。 |  |
+| 3 | Then you add real input, which makes the program interactive. | 接着你加入真实输入，让程序变成可交互。 |  |
+| 4 | Now you are no longer just copying; you are using the concept. | 到这里你已经不只是抄，而是在真正使用这个概念。 |  |
 
 # 17\. Complete Practical Example 2 / 完整实际例子 2
 
-## Topic / 主题：Practicing loops effectively / 有效练循环
+## Topic: Practicing loops effectively / 主题：怎样有效练循环
 
-### Step A: Basic example / 基础例子
+**Step A: Basic example / 基础例子**
 ```python
 for i in range(5):  
     print(i)
 ```
 
-### Step B: Modify it / 修改它
+**Step B: Modify it / 修改它**
+改成输出 1 到 5：
 ```python
 for i in range(1, 6):  
     print(i)
 ```
 
-### Step C: Another variation / 再做一个变化
+**Step C: Another variation / 再做一个变化**
+改成只输出偶数：
 ```python
 for i in range(2, 11, 2):  
     print(i)
 ```
 
-### Step D: Small task / 小任务
+**Step D: Small independent task / 小型独立任务**
+计算 1 到 5 的总和：
 ```python
-total = 0  
+total = 0
+
 for i in range(1, 6):  
     total += i  
+
 print("Total:", total)
 ```
 
-## What this practice is doing / 训练内容
+## What this practice is doing / 这个练习实际上在训练什么
 
 | **Type**<br><br>**类型** | **Core Idea**<br><br>**核心概念** | **How it works**<br><br>**它如何运作** | **Usage / Example**<br><br>**用途 / 例子** |
 |---|---|---|---|
-| **Repetition**<br><br>**重复执行** | Loop repeats actions.<br><br>循环重复执行。 | Same code runs multiple times.<br><br>重复运行。 | Print multiple values.<br><br>输出多个值。 |
-| **Range Control**<br><br>**范围控制** | Control start/end.<br><br>控制范围。 | range() defines sequence.<br><br>控制序列。 | 1–5 instead of 0–4.<br><br>调整范围。 |
-| **Step Control**<br><br>**步长控制** | Skip values.<br><br>跳步执行。 | Third parameter changes pattern.<br><br>改变输出规律。 | Even numbers only.<br><br>输出偶数。 |
-| **Accumulation**<br><br>**累加** | Build totals.<br><br>累加数据。 | Variable updates per loop.<br><br>逐步更新。 | Sum values.<br><br>求和。 |
+| **Practice Layer 练习层** | **English** | **中文** |  |
+| 1 | You first understand loop repetition. | 你先理解循环会重复执行。 |  |
+| 2 | Then you learn range boundaries. | 然后你学 range 的边界。 |  |
+| 3 | Then you see how step values change the output. | 接着你看到 step 如何改变输出。 |  |
+| 4 | Finally you use the loop for accumulation, not just printing. | 最后你把循环拿去做累加，而不只是打印。 |  |
 
 # 18\. Complete Practical Example 3 / 完整实际例子 3
 
-## Topic / 主题：Mini-project / 小项目
+## Topic: From exercise to mini-project / 从练习到小项目
+下面是一个很小的"数字统计器"：
 ```python
 numbers = []  
-count = int(input("How many numbers? "))  
+count = int(input("How many numbers do you want to enter? "))  
 
 for i in range(count):  
-    value = int(input("Enter number: "))  
+    value = int(input("Enter a number: "))  
     numbers.append(value)  
 
 total = sum(numbers)  
@@ -239,32 +255,44 @@ print("Total:", total)
 print("Average:", average)
 ```
 
-## Why this matters / 为什么重要
+## Why this is powerful practice / 为什么这是很有力量的练习
 
 | **Type**<br><br>**类型** | **Core Idea**<br><br>**核心概念** | **How it works**<br><br>**它如何运作** | **Usage / Example**<br><br>**用途 / 例子** |
 |---|---|---|---|
-| **Integration**<br><br>**整合** | Combine concepts.<br><br>整合知识。 | Multiple parts work together.<br><br>组合使用。 | Real small system.<br><br>小系统。 |
-| **Loop + List**<br><br>**循环+列表** | Store repeated input.<br><br>存储数据。 | Append values dynamically.<br><br>动态加入。 | Data collection.<br><br>收集数据。 |
-| **Processing**<br><br>**处理** | Compute results.<br><br>计算结果。 | sum + average.<br><br>求和与平均。 | Data analysis.<br><br>数据分析。 |
-| **Output**<br><br>**输出** | Show results.<br><br>显示结果。 | Print structured info.<br><br>结构化输出。 | Final result display.<br><br>最终输出。 |
+| **Concept 概念** | **How it appears here 它在这里如何出现** | **中文说明** |  |
+| Input | The program asks the user for count and values. | 程序会向用户要数量和每个值。 |  |
+| Loop | The loop repeats input collection. | 循环负责重复收集输入。 |  |
+| List | Data is stored in a list. | 数据被存进列表。 |  |
+| Processing | The program calculates total and average. | 程序会计算总和和平均值。 |  |
+| Output | The program displays results clearly. | 程序最后清楚显示结果。 |  |
+| Integration | Multiple topics are combined in one coherent task. | 多个知识点被整合在一个完整任务里。 |  |
 
 # 19\. Good Practice vs Bad Practice / 好练习 vs 差练习
 
 | **Type**<br><br>**类型** | **Core Idea**<br><br>**核心概念** | **How it works**<br><br>**它如何运作** | **Usage / Example**<br><br>**用途 / 例子** |
 |---|---|---|---|
-| **Bad Practice**<br><br>**坏练习** | Passive learning.<br><br>被动学习。 | No real understanding.<br><br>没有真正理解。 | Copy and forget.<br><br>抄完就忘。 |
-| **Good Practice**<br><br>**好练习** | Active learning.<br><br>主动学习。 | Practice + modify + reflect.<br><br>练习+修改+复盘。 | Build real skill.<br><br>建立能力。 |
+| **Bad Practice 坏练习** | Read example and move on.<br><br>看完例子就走。 | Passive learning with weak retention.<br><br>被动学习，记忆弱。 |  |
+|  | Copy full answers too early.<br><br>太早抄完整答案。 | No independent thinking.<br><br>没有独立思考。 |  |
+|  | Practice random topics.<br><br>乱练不同主题。 | No pattern reinforcement.<br><br>没有模式建立。 |  |
+| **Better Practice 好练习** | Re-type, modify, and rebuild it.<br><br>重打、修改、重建。 | Active learning.<br><br>主动学习。 |  |
+|  | Try first, then use hints, then compare.<br><br>先试，再看提示，最后对照。 | Gradual independence.<br><br>逐步独立。 |  |
+|  | Focus on one concept family at a time.<br><br>一次专注一个概念。 | Strong pattern building.<br><br>强化模式。 |  |
 
-# 20\. Self-Check Table / 自我检查
-
-| **Type**<br><br>**类型** | **Core Idea**<br><br>**核心概念** | **How it works**<br><br>**它如何运作** | **Usage / Example**<br><br>**用途 / 例子** |
-|---|---|---|---|
-| **Self Check**<br><br>**自检** | Evaluate learning quality.<br><br>评估学习质量。 | Ask yourself key questions.<br><br>自我提问。 | Can I write? modify? explain?<br><br>我能写？改？解释？ |
-
-# 21\. Key Takeaways / 核心重点
+# 20\. Self-Check Table / 自我检查表
 
 | **Type**<br><br>**类型** | **Core Idea**<br><br>**核心概念** | **How it works**<br><br>**它如何运作** | **Usage / Example**<br><br>**用途 / 例子** |
 |---|---|---|---|
-| **Practice = Action**<br><br>**练习=行动** | Coding requires doing.<br><br>必须动手。 | Write, test, fix.<br><br>写、测、改。 | Real skill growth.<br><br>真实成长。 |
-| **Small steps matter**<br><br>**小步很重要** | Build gradually.<br><br>逐步建立。 | Repeat small tasks.<br><br>重复小练习。 | Stable progress.<br><br>稳定进步。 |
-| **Independence is key**<br><br>**独立最重要** | Reduce reliance.<br><br>减少依赖。 | Think and solve yourself.<br><br>自己思考解决。 | True mastery.<br><br>真正掌握。 |
+| Question | After learning a topic, do I only reread it, or do I also write code with it? | 学完后我是只看，还是也会写？ |  |
+| Question | Can I modify an example instead of only reproducing it exactly? | 我能不能改例子？ |  |
+| Question | Do I try solving a task before looking at the full answer? | 我会不会先自己试？ |  |
+| Question | Do I know what concept I am practicing today? | 我知道今天练什么吗？ |  |
+
+# 21\. Key Takeaways / 本课核心重点
+
+| **Type**<br><br>**类型** | **Core Idea**<br><br>**核心概念** | **How it works**<br><br>**它如何运作** | **Usage / Example**<br><br>**用途 / 例子** |
+|---|---|---|---|
+| **Practice means action with feedback**<br><br>**练习=行动+反馈** | Real coding skill grows when you write, test, fail, fix, and repeat.<br><br>能力来自反复写、测、错、改。 | Feedback loop builds skill.<br><br>反馈建立能力。 |  |
+| **Do not stop at examples**<br><br>**不要停在例子** | Examples are the starting point, not the finish line.<br><br>例子只是起点。 | Must modify and rebuild.<br><br>必须修改重建。 |  |
+| **Small focused tasks matter**<br><br>**小任务很重要** | Small tasks isolate concepts.<br><br>小任务隔离概念。 | Repetition builds mastery.<br><br>重复建立掌握。 |  |
+| **Mini-projects connect concepts**<br><br>**小项目整合概念** | Projects combine ideas.<br><br>项目整合知识。 | Integration builds real ability.<br><br>整合建立能力。 |  |
+| **Good practice reduces dependence**<br><br>**好练习减少依赖** | Less reliance on full answers over time.<br><br>逐渐减少依赖。 | Independence shows progress.<br><br>独立性代表进步。 |  |
