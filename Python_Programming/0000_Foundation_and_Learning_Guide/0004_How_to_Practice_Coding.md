@@ -227,13 +227,12 @@ print("Total:", total)
 
 ## What this practice is doing / 这个练习实际上在训练什么
 
-| **Type**<br><br>**类型** | **Core Idea**<br><br>**核心概念** | **How it works**<br><br>**它如何运作** | **Usage / Example**<br><br>**用途 / 例子** |
-|---|---|---|---|
-| **Practice Layer 练习层** | **English** | **中文** |  |
-| 1 | You first understand loop repetition. | 你先理解循环会重复执行。 |  |
-| 2 | Then you learn range boundaries. | 然后你学 range 的边界。 |  |
-| 3 | Then you see how step values change the output. | 接着你看到 step 如何改变输出。 |  |
-| 4 | Finally you use the loop for accumulation, not just printing. | 最后你把循环拿去做累加，而不只是打印。 |  |
+| **Practice Layer 练习层** | **English** | **中文** |
+| --- | --- | --- |
+| 1 | You first understand loop repetition. | 你先理解循环会重复执行。 |
+| 2 | Then you learn range boundaries. | 然后你学 range 的边界。 |
+| 3 | Then you see how step values change the output. | 接着你看到 step 如何改变输出。 |
+| 4 | Finally you use the loop for accumulation, not just printing. | 最后你把循环拿去做累加，而不只是打印。 |
 
 # 18\. Complete Practical Example 3 / 完整实际例子 3
 
@@ -277,12 +276,12 @@ print("Average:", average)
 
 | **Bad Practice 坏练习** | **Better Practice 好练习** |
 | --- | --- |
-| Read example and move on. <br>看完例子就走。 | Re-type, modify, and rebuild it. <br>重打、修改、重建。 |
-| Copy full answers too early. <br>太早抄完整答案。 | Try first, then use hints, then compare. <br>先试，再看提示，最后再对照。 |
-| Practice random topics. <br>乱练不同主题。 | Focus on one concept family at a time. <br>一次专注一个概念家族。 |
-| Never review mistakes. <br>从不回顾错误。 | Keep a mistake log and revisit weak spots. <br>记录错误并回练弱点。 |
-| Only do tiny isolated tasks forever. <br>永远只做碎小题。 | Mix small exercises with mini-projects. <br>小练习和小项目都要做。 |
-| Judge progress by speed only. <br>只用速度判断进步。 | Judge progress by independence, recovery, and explanation ability. <br>用独立性、恢复速度和解释能力判断进步。 |
+| Read example and move on. <br><br>看完例子就走。 | Re-type, modify, and rebuild it. <br><br>重打、修改、重建。 |
+| Copy full answers too early. <br><br>太早抄完整答案。 | Try first, then use hints, then compare. <br><br>先试，再看提示，最后再对照。 |
+| Practice random topics. <br><br>乱练不同主题。 | Focus on one concept family at a time. <br><br>一次专注一个概念家族。 |
+| Never review mistakes. <br><br>从不回顾错误。 | Keep a mistake log and revisit weak spots. <br><br>记录错误并回练弱点。 |
+| Only do tiny isolated tasks forever. <br><br>永远只做碎小题。 | Mix small exercises with mini-projects. <br><br>小练习和小项目都要做。 |
+| Judge progress by speed only. <br><br>只用速度判断进步。 | Judge progress by independence, recovery, and explanation ability. <br><br>用独立性、恢复速度和解释能力判断进步。 |
 
 # 20\. Self-Check Table / 自我检查表
 
@@ -301,8 +300,8 @@ print("Average:", average)
 
 | **Type 类型** | **Core Idea 核心概念** | **How it works 它如何运作** | **Usage / Example 用途 / 例子** |
 | --- | --- | --- | --- |
-| **Practice means action with feedback 练习 = 行动 + 反馈** | Real coding skill grows when you write, test, fail, fix, and repeat. <br>真正的代码能力来自你写、测、错、改、再重复。 | The feedback loop builds usable skill. <br>反馈循环会建立可用能力。 | Example: Solve, debug, improve, retry. <br>例子：做题、调试、改进、重做。 |
-| **Do not stop at examples 不要停在例子** | Examples are the starting point, not the finish line. <br>例子只是起点，不是终点。 | You must modify and rebuild them to truly learn. <br>你必须修改和重建它们，才算真的学到。 | Example: Change a sample loop into a new loop task. <br>例子：把样板循环改成新任务。 |
-| **Small focused tasks matter 小而聚焦的任务很重要** | Small tasks isolate concepts and make repetition possible. <br>小任务能隔离概念，也更方便重复。 | Repetition with small variation creates real understanding. <br>带变化的重复会创造真正理解。 | Example: Several small list exercises build list fluency. <br>例子：几道小列表题会建立列表熟练度。 |
-| **Mini-projects connect concepts 小项目能连接概念** | Projects force separate ideas to work together in one flow. <br>项目会逼你把分散概念连接成一个流程。 | Integration turns isolated knowledge into usable programming structure. <br>整合会把零散知识变成可用程序结构。 | Example: A small tracker app uses input, loops, lists, and output together. <br>例子：一个小记录器会同时用到输入、循环、列表和输出。 |
-| **Good practice reduces dependence 好练习会减少依赖** | If your practice is working, you gradually need fewer complete examples. <br>如果练习有效，你会逐渐减少对完整例子的依赖。 | Independence is one of the clearest signs of progress. <br>独立性是最清楚的进步信号之一。 | Example: You start solving tasks with only a hint instead of a full solution. <br>例子：你开始只靠提示就能做题，而不是要完整答案。 |
+| **Practice means action with feedback 练习 = 行动 + 反馈** | Real coding skill grows when you write, test, fail, fix, and repeat. <br><br>真正的代码能力来自你写、测、错、改、再重复。 | The feedback loop builds usable skill. <br><br>反馈循环会建立可用能力。 | Example: Solve, debug, improve, retry. <br>例子：做题、调试、改进、重做。 |
+| **Do not stop at examples 不要停在例子** | Examples are the starting point, not the finish line. <br><br>例子只是起点，不是终点。 | You must modify and rebuild them to truly learn. <br><br>你必须修改和重建它们，才算真的学到。 | Example: Change a sample loop into a new loop task. <br><br>例子：把样板循环改成新任务。 |
+| **Small focused tasks matter 小而聚焦的任务很重要** | Small tasks isolate concepts and make repetition possible. <br><br>小任务能隔离概念，也更方便重复。 | Repetition with small variation creates real understanding. <br><br>带变化的重复会创造真正理解。 | Example: Several small list exercises build list fluency. <br><br>例子：几道小列表题会建立列表熟练度。 |
+| **Mini-projects connect concepts 小项目能连接概念** | Projects force separate ideas to work together in one flow. <br><br>项目会逼你把分散概念连接成一个流程。 | Integration turns isolated knowledge into usable programming structure. <br><br>整合会把零散知识变成可用程序结构。 | Example: A small tracker app uses input, loops, lists, and output together. <br><br>例子：一个小记录器会同时用到输入、循环、列表和输出。 |
+| **Good practice reduces dependence 好练习会减少依赖** | If your practice is working, you gradually need fewer complete examples. <br><br>如果练习有效，你会逐渐减少对完整例子的依赖。 | Independence is one of the clearest signs of progress. <br><br>独立性是最清楚的进步信号之一。 | Example: You start solving tasks with only a hint instead of a full solution. <br><br>例子：你开始只靠提示就能做题，而不是要完整答案。 |
