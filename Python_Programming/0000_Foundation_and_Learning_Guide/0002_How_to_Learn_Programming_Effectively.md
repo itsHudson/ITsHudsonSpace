@@ -166,7 +166,7 @@
 
 ## Example Code
 
-\`\`\`python
+```python
 
 age = 20  
 <br/>if age >= 18:  
@@ -174,11 +174,11 @@ print("Adult")
 else:  
 print("Not adult")
 
-\`\`\`
+```
 
 ## Modify it / 修改它
 
-\`\`\`python
+```python
 
 age = 15  
 <br/>if age >= 18:  
@@ -186,11 +186,11 @@ print("Adult")
 else:  
 print("Not adult")
 
-\`\`\`
+```
 
 ## Build a tiny task / 做一个小任务
 
-\`\`\`python
+```python
 
 score = int(input("Enter your score: "))  
 <br/>if score >= 50:  
@@ -198,7 +198,7 @@ print("Pass")
 else:  
 print("Fail")
 
-\`\`\`
+```
 
 ## 这个过程里你学到的，不只是 if 语法，而是
 
