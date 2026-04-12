@@ -201,14 +201,15 @@ else:
 
 # 17\. Mini Comparison Table / 小对比表
 
-| **Bad Learning Habit**<br><br>**不良学习习惯**         | **Better Learning Habit**<br><br>**更好的学习习惯**            |
-| ------------------------------------------------------ | -------------------------------------------------------------- |
-| Only read examples <br>只看例子                        | Re-type and modify examples <br>自己重打并修改例子             |
-| Try to memorize everything <br>试图背下所有内容        | Understand patterns and reuse them <br>理解模式并重复使用      |
-| Fear errors <br>害怕报错                               | Use errors as feedback <br>把报错当反馈                        |
-| Jump to advanced topics too early <br>太早跳进高级内容 | Build one stable layer at a time <br>一次稳住一层              |
-| Study a lot once, then stop <br>一次学很多然后停很久   | Study regularly in smaller sessions <br>稳定地分小段学习       |
-| Copy full solutions immediately <br>立刻抄完整答案     | Try first, then compare and improve <br>先自己尝试，再对照改进 |
+| **Type**<br><br>**类型**                     | **Core Idea**<br><br>**核心概念**                                                                 | **How it works**<br><br>**它如何运作**                                                              | **Usage / Example**<br><br>**用途 / 例子**                                                          |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| **Reading Only**<br><br>**只看不写**         | Only reading examples creates weak understanding.<br><br>只看例子，会形成很弱的理解。               | Without typing and testing, ideas stay passive in memory.<br><br>如果不自己打和测试，知识会停留在被动记忆。 | Re-type and modify examples yourself.<br><br>自己重打并修改例子。                                    |
+| **Memorizing Everything**<br><br>**死记全部** | Trying to memorize everything is inefficient for programming.<br><br>试图背下所有内容，对编程来说效率很低。 | Understanding patterns makes reuse much easier.<br><br>理解模式后，重复使用会容易很多。                 | Understand patterns and reuse them in new tasks.<br><br>理解模式并把它用到新任务。                    |
+| **Fear of Errors**<br><br>**害怕报错**       | Fear of errors slows down real learning progress.<br><br>害怕报错，会拖慢真正的学习进步。             | Errors show what needs correction and improvement.<br><br>错误会告诉你哪里需要修正和加强。              | Use errors as feedback and fix them actively.<br><br>把报错当反馈，并主动修正。                       |
+| **Jumping Too Early**<br><br>**太早跳进阶**   | Jumping into advanced topics too early creates overload.<br><br>太早跳进高级内容，会造成负担过重。     | Weak basics make later topics harder to understand.<br><br>基础不稳，会让后面内容更难懂。              | Build one stable layer at a time first.<br><br>先一次稳住一层。                                       |
+| **Study Then Stop**<br><br>**学很多后停很久** | Studying a lot once and then stopping weakens retention.<br><br>一次学很多然后停很久，会削弱记忆保持。 | Memory grows better through repeated smaller sessions.<br><br>记忆通过稳定重复的小段学习建立得更好。     | Study regularly in smaller sessions.<br><br>稳定地分小段学习。                                       |
+| **Copying Full Answers**<br><br>**直接抄答案** | Copying full solutions too fast reduces independent thinking.<br><br>太快抄完整答案，会减少独立思考。   | Trying first helps expose what you really know or miss.<br><br>先自己尝试，才能暴露你真正会或不会的地方。 | Try first, then compare and improve later.<br><br>先自己尝试，再对照改进。                            |
+
 
 # 18\. Key Takeaways / 本课核心重点
 
@@ -221,13 +222,11 @@ else:
 
 # 19\. Suggested Self-Check / 自我检查
 
-你学完这课后，应该能回答这些问题：
-
-| **Question (English)**                                                      | **中文问题**                               |
-| --------------------------------------------------------------------------- | ------------------------------------------ |
-| Why is only watching tutorials not enough?                                  | 为什么只看教程不够？                       |
-| What is the difference between recognizing code and truly understanding it? | “看得懂代码”和“真正理解代码”的区别是什么？ |
-| Why are mistakes useful in programming study?                               | 为什么错误对编程学习有用？                 |
-| What does effective practice look like?                                     | 有效练习长什么样？                         |
-| Why is consistent study better than random long study?                      | 为什么稳定学习比随机长时间学习更好？       |
-| How should you react when you feel confused?                                | 当你感到困惑时，应该怎么做？               |
+| **Type**<br><br>**类型**                          | **Core Idea**<br><br>**核心概念**                                                                       | **How it works**<br><br>**它如何运作**                                                                | **Usage / Example**<br><br>**用途 / 例子**                                                                 |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Tutorial Limitation**<br><br>**教程的限制**     | Watching tutorials alone is not enough for real learning.<br><br>只看教程，不足以形成真正的学习。         | Real understanding needs writing, testing, and debugging by yourself.<br><br>真正理解需要自己写、测试和调试。 | Ask yourself why watching only is not enough.<br><br>问自己：为什么只看教程不够？                             |
+| **Recognition vs Understanding**<br><br>**识别与理解** | Recognizing code is different from truly understanding it.<br><br>看得懂代码，和真正理解代码，是两回事。 | Recognition means it looks familiar; understanding means you can explain and use it.<br><br>识别是眼熟；理解是能解释和应用。 | Ask yourself what makes true understanding different.<br><br>问自己：真正理解和只是眼熟有什么区别？           |
+| **Value of Mistakes**<br><br>**错误的价值**        | Mistakes are useful because they reveal weak points clearly.<br><br>错误有用，因为它会清楚暴露薄弱点。    | Each mistake shows what concept, logic, or pattern still needs work.<br><br>每个错误都会指出还没学稳的概念或逻辑。 | Ask yourself why mistakes help programming study.<br><br>问自己：为什么错误对编程学习有帮助？                 |
+| **Effective Practice**<br><br>**有效练习**         | Effective practice is active, targeted, and repeated over time.<br><br>有效练习是主动的、有针对性的、重复的。 | Strong practice includes writing, modifying, testing, and reviewing.<br><br>好的练习包含写、改、测和回顾。     | Ask yourself what effective practice really looks like.<br><br>问自己：有效练习到底长什么样？                 |
+| **Consistency Advantage**<br><br>**稳定学习优势**  | Consistent study works better than random long sessions.<br><br>稳定学习比随机长时间学习更有效。         | Regular repetition strengthens memory and reduces restart difficulty.<br><br>规律重复会强化记忆，也减少重启难度。 | Ask yourself why consistency beats random long study.<br><br>问自己：为什么稳定学习更有效？                   |
+| **Handling Confusion**<br><br>**处理困惑**         | Confusion should be handled with analysis, not panic.<br><br>面对困惑，应该分析，而不是慌张。              | Reducing the problem and asking clearer questions helps learning continue.<br><br>缩小问题并提出更清楚的问题，能让学习继续推进。 | Ask yourself how you should react when confused.<br><br>问自己：当你感到困惑时，应该怎么做？                  |
