@@ -135,7 +135,7 @@
 | **Reduce to a smaller example**<br><br>**缩成更小例子** | If the original code is too complex, rewrite the same pattern in a smaller example.<br><br>如果原代码太复杂，就把同样模式改写成更小的例子。 | Smaller examples expose the core mechanism more clearly than the original full version.<br><br>更小的例子会比原来的完整版本更清楚地暴露核心机制。 | Example: If a nested loop is confusing in a big program, recreate it with a tiny 2x2 list example.<br><br>例子：如果大程序里的嵌套循环很乱，就用一个小小的 2x2 列表重做一次。 |
 | **Return after learning**<br><br>**学会小点后再回原代码** | Once you understand the small missing concept, return to the original code and reread it.<br><br>当你补懂了那个小缺口后，再回去重新读原代码。 | The program often becomes much clearer after one missing prerequisite is fixed.<br><br>很多时候，只要补上一个前置概念，整段程序就会清楚很多。 | Example: Learning `items()` may suddenly make a dictionary loop understandable.<br><br>例子：一旦懂了 `items()`，一个字典循环可能会突然变得简单。 |
 
-```markdown
+
 # 16\. Complete Practical Example 1 / 完整实际例子 1
 
 下面先看一个很短的程序。  
@@ -253,4 +253,3 @@ print(result)
 | **Trace data flow**<br><br>**追踪数据流** | Understanding code requires following how data enters, changes, and leaves.<br><br>理解代码必须追踪数据怎样进入、怎样改变、怎样离开。 | Variables carry the state of the program.<br><br>变量承载程序状态。 | Example: input → variable → loop → result → print.<br><br>例子：输入 → 变量 → 循环 → 结果 → 输出。 |
 | **Prediction improves reading**<br><br>**预测会加强阅读能力** | Predicting output before running helps reveal real understanding.<br><br>运行前先预测输出，能更真实地暴露理解程度。 | Mental simulation strengthens logic.<br><br>脑内模拟会强化逻辑能力。 | Example: Guess a loop's output first, then run it.<br><br>例子：先猜循环输出，再运行验证。 |
 | **Confusion should be reduced, not feared**<br><br>**困惑要被缩小，不是被害怕** | When code feels hard, isolate the unknown part and simplify it.<br><br>当代码很难时，要把陌生部分拆出来并简化。 | Small understanding steps build full understanding later.<br><br>小理解会慢慢叠成完整理解。 | Example: Learn one unfamiliar method, then return to the whole program.<br><br>例子：先补懂一个陌生方法，再回去看整个程序。 |
-```
