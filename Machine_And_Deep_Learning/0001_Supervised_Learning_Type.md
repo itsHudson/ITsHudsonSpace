@@ -30,7 +30,6 @@ This section focuses on supervised learning problems where the output is a categ
 | Decision Boundary | A boundary that separates different classes. | Model learns boundaries between classes → places new data into correct region. | Important when separating categories clearly. | Cat vs Dog boundary |
 | Common Use Case Pattern | Input → Category Decision | Input features are processed → model predicts class label. | Used in decision-making systems. | Approve / Reject loan |
 
----
 
 ## A. TYPES OF CLASSIFICATION
 
