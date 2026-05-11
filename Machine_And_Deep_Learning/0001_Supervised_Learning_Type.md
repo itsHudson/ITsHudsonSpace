@@ -31,7 +31,7 @@ This section focuses on supervised learning problems where the output is a categ
 | Common Use Case Pattern | Input → Category Decision | Input features are processed → model predicts class label. | Used in decision-making systems. | Approve / Reject loan |
 
 
-## A. TYPES OF CLASSIFICATION
+### A. TYPES OF CLASSIFICATION
 
 This section explains different classification structures based on the number of possible outputs.
 
@@ -41,9 +41,8 @@ This section explains different classification structures based on the number of
 | Multi-class Classification | Predicts more than two classes, but only one correct output. | Model calculates score for each class → selects highest score. | Use when one input belongs to only one category. | Cat / Dog / Bird |
 | Multi-label Classification | One input can have multiple correct labels simultaneously. | Model evaluates each label independently → returns multiple labels. | Use when one item belongs to multiple categories. | Dog + Outdoor + Running |
 
----
 
-## B. CLASSIFICATION ALGORITHMS
+### B. CLASSIFICATION ALGORITHMS
 
 This section explains common algorithms used to solve classification problems.
 
