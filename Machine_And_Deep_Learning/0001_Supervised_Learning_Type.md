@@ -59,9 +59,8 @@ This section explains common algorithms used to solve classification problems.
 | CNN | Deep learning model specialized for image classification. | Detect image features → identify objects → classify image. | Use for computer vision tasks. | Face recognition |
 | Transformer / BERT | Deep learning model specialized for text classification. | Understand word context → classify text meaning. | Use for NLP tasks. | Sentiment analysis |
 
----
 
-## C. CLASSIFICATION OUTPUT TYPES
+### C. CLASSIFICATION OUTPUT TYPES
 
 This section explains what classification models actually return.
 
@@ -71,9 +70,8 @@ This section explains what classification models actually return.
 | Probability Score | Confidence level for each class. | Model converts scores into probabilities. | Use when confidence matters. | Spam = 0.85 |
 | Confidence Score | Measures certainty of prediction. | Higher score indicates stronger confidence. | Use in risk-sensitive systems. | Fraud confidence = 95% |
 
----
 
-## D. CLASSIFICATION EVALUATION METRICS
+### D. CLASSIFICATION EVALUATION METRICS
 
 This section explains how classification performance is measured.
 
@@ -86,9 +84,8 @@ This section explains how classification performance is measured.
 | F1 Score | Balance between precision and recall. | Harmonic mean of precision and recall. | Use when both FP and FN matter. | Fraud detection |
 | ROC-AUC | Measures class separation performance. | Compare TPR vs FPR across thresholds. | Use for model comparison. | AUC = 0.92 |
 
----
 
-## E. CLASSIFICATION USE CASES
+### E. CLASSIFICATION USE CASES
 
 This section connects classification concepts to real-world applications.
 
