@@ -256,7 +256,7 @@ Regression answers:
 
 ---
 
-# 3F Overview
+# 3F. Overview
 
 ## 3.27 Regression vs Classification
 | Feature | Regression | Classification | Difference | Example |
