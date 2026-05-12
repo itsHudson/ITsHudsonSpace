@@ -5,173 +5,545 @@ This section explains common problems that happen when training Machine Learning
 Most models do **not work perfectly on the first try**.
 
 Common problems:
+
 - Model learns too little
 - Model learns too much
 - Model learns wrong patterns
 - Model becomes unstable
+- Model performs well in training but fails in real life
 
-This section helps answer:
+This section answers:
 
-**"Why is my model performing badly?"**
+```text
+"Why is my model performing badly?"
+```
 
 ---
 
-## 6.1 Underfitting
+## 6.1 Problem Examples Used Throughout This Section
 
-| Topic | Definition | How It Works | Example | Important Notes |
+This section introduces the examples reused throughout this topic.
+
+| Example | ML Task | Problem Type | Real Use Case | Output |
 | --- | --- | --- | --- | --- |
-| Underfitting | Model is too simple and cannot learn real patterns | Model fails to capture important relationships | Straight line for complex house prices | Poor performance everywhere |
-| Training Error | High training error | Model performs badly on training data | Wrong house predictions | Warning sign |
-| Testing Error | High testing error | Performs badly on new data too | Wrong future predictions | Also high |
-| Main Cause | Model too weak | Not enough learning power | Very simple algorithm | Common beginner issue |
+| House Price Prediction | Regression | Overfitting/Underfitting | Real estate | House price |
+| Spam Detection | Classification | Overfitting | Gmail | Spam/Not Spam |
+| Fraud Detection | Classification | Class imbalance | Banking | Fraud/Normal |
+| Medical Diagnosis | Classification | Data leakage | Healthcare | Disease prediction |
 
 ---
 
-## 6.2 Overfitting
+# 6.2 Underfitting
 
-| Topic | Definition | How It Works | Example | Important Notes |
+This section explains when the model is too simple to learn real patterns.
+
+The model fails on both training data and new data.
+
+---
+
+## 6.2.1 Underfitting Symptoms
+
+| Metric | Behavior | Problem | Result | Warning Level |
 | --- | --- | --- | --- | --- |
-| Overfitting | Model memorizes training data instead of learning patterns | Learns noise instead of useful information | Memorizing spam emails | Very common issue |
-| Training Error | Very low training error | Looks excellent on training data | 99% training accuracy | Misleading |
-| Testing Error | High testing error | Fails on new data | Poor generalization | Major warning sign |
-| Main Cause | Model too complex | Too many parameters | Deep decision tree | Dangerous |
+| Training Error | High | Model cannot learn | Bad predictions | High |
+| Testing Error | High | Poor generalization | Fails everywhere | High |
+| Model Complexity | Too low | Too simple | Weak learning | Medium |
 
 ---
 
-## 6.3 Good Fit (Balanced Model)
+## 6.2.2 Example A: House Price Underfitting (Detailed)
 
-| Topic | Definition | How It Works | Example | Important Notes |
+```text
+1. House data:
+   - Size
+   - Location
+   - Bedrooms
+
+2. Model used:
+   Very simple Linear Regression
+
+3. Real house prices are complex
+
+4. Model predicts:
+   Every house ≈ RM500,000
+
+5. Result:
+   Wrong predictions for expensive and cheap houses
+```
+
+---
+
+## 6.2.3 Example B: Student Score Prediction (Detailed)
+
+```text
+Input:
+Study hours
+
+Missing feature:
+Student intelligence
+Attendance
+Practice tests
+
+Model predicts poorly because important information is missing
+```
+
+---
+
+# 6.3 Overfitting
+
+This section explains when the model memorizes training data instead of learning patterns.
+
+Training performance looks amazing.
+
+Real-world performance becomes bad.
+
+---
+
+## 6.3.1 Overfitting Symptoms
+
+| Metric | Behavior | Problem | Result | Warning Level |
 | --- | --- | --- | --- | --- |
-| Good Fit | Model learns real patterns correctly | Performs well on both training and testing data | Good house price prediction | Ideal outcome |
-| Training Performance | Low training error | Learns properly | Strong training results | Healthy model |
-| Testing Performance | Low testing error | Generalizes well | Good future predictions | Desired result |
+| Training Accuracy | Very high | Looks great | Misleading | High |
+| Testing Accuracy | Low | Poor generalization | Fails new data | High |
+| Model Complexity | Too high | Too flexible | Memorization | High |
 
 ---
 
-## 6.4 Underfitting vs Overfitting vs Good Fit
+## 6.3.2 Example A: Spam Detection Overfitting (Detailed)
+
+```text
+1. Training spam emails contain:
+   "Free"
+   "Win"
+   "Prize"
+
+2. Model memorizes:
+   Every email with "free" = spam
+
+3. New email:
+   "Free office meeting room available"
+
+4. Model predicts:
+   Spam
+
+5. Result:
+   Wrong prediction
+```
+
+---
+
+## 6.3.3 Example B: House Price Overfitting (Detailed)
+
+```text
+1. Model memorizes exact training house prices
+
+2. New house enters system
+
+3. House is slightly different
+
+4. Model fails to predict correctly
+```
+
+---
+
+# 6.4 Good Fit (Balanced Model)
+
+This section explains the ideal learning situation.
+
+The model learns useful patterns and generalizes well.
+
+---
+
+## 6.4.1 Good Fit Characteristics
+
+| Metric | Training Performance | Testing Performance | Result | Status |
+| --- | --- | --- | --- | --- |
+| Error | Low | Low | Good predictions | Healthy |
+| Generalization | Strong | Strong | Real-world success | Best |
+
+---
+
+## 6.4.2 Example A: House Price Good Fit (Detailed)
+
+```text
+1. Model learns:
+   Bigger house → higher price
+   Better location → higher price
+
+2. New house enters system
+
+3. Model predicts accurately
+
+4. Real-world prediction works well
+```
+
+---
+
+# 6.5 Underfitting vs Overfitting vs Good Fit
+
+This section compares the three major model states.
 
 | Model State | Training Error | Testing Error | Problem | Example |
 | --- | --- | --- | --- | --- |
-| Underfitting | High | High | Too simple | Weak regression model |
-| Good Fit | Low | Low | Balanced | Strong prediction model |
-| Overfitting | Low | High | Too complex | Memorized dataset |
+| Underfitting | High | High | Too simple | Weak regression |
+| Good Fit | Low | Low | Balanced | Stable model |
+| Overfitting | Low | High | Too complex | Memorization |
 
 ---
 
-## 6.5 Bias
+## 6.5.1 Example Comparison (Detailed)
 
-| Topic | Definition | How It Works | Example | Important Notes |
+```text
+Underfitting:
+Predicts everything badly
+
+Good Fit:
+Predicts most cases correctly
+
+Overfitting:
+Perfect training results but fails new cases
+```
+
+---
+
+# 6.6 Bias
+
+This section explains error caused by overly simple assumptions.
+
+High bias often causes underfitting.
+
+---
+
+## 6.6.1 Example A: High Bias (Detailed)
+
+```text
+Salary prediction model:
+
+Only uses:
+Years of experience
+
+Ignores:
+Education
+Skills
+Industry
+
+Predictions become inaccurate
+```
+
+---
+
+# 6.7 Variance
+
+This section explains error caused by extreme sensitivity to training data.
+
+High variance often causes overfitting.
+
+---
+
+## 6.7.1 Example A: High Variance (Detailed)
+
+```text
+House A:
+RM500,000
+
+Very similar House B:
+RM510,000
+
+Model predicts:
+RM500,000 for A
+RM900,000 for B
+
+Model is unstable
+```
+
+---
+
+# 6.8 Bias vs Variance Tradeoff
+
+This section explains balancing simple vs complex models.
+
+---
+
+## 6.8.1 Tradeoff Table
+
+| Model Complexity | Bias | Variance | Result | Risk |
 | --- | --- | --- | --- | --- |
-| Bias | Error caused by overly simple assumptions | Model cannot capture complexity | Always predicting average salary | Often causes underfitting |
-| High Bias | Model too simple | Weak learning | Basic linear model | Poor flexibility |
-| Result | Consistent mistakes | Same wrong predictions | House price errors | Needs stronger model |
+| Very Simple | High | Low | Underfitting | Weak model |
+| Balanced | Medium | Medium | Good fit | Best |
+| Very Complex | Low | High | Overfitting | Unstable |
 
 ---
 
-## 6.6 Variance
+## 6.8.2 Example A: Decision Tree Depth (Detailed)
 
-| Topic | Definition | How It Works | Example | Important Notes |
+```text
+Tree depth = 2:
+Too simple → underfitting
+
+Tree depth = 100:
+Too complex → overfitting
+
+Tree depth = 10:
+Balanced learning
+```
+
+---
+
+# 6.9 Model Complexity
+
+This section explains model flexibility.
+
+---
+
+## 6.9.1 Complexity Levels
+
+| Complexity Level | Example Model | Learning Ability | Risk | Result |
 | --- | --- | --- | --- | --- |
-| Variance | Error caused by sensitivity to small changes | Model reacts too strongly | Different predictions for similar houses | Often causes overfitting |
-| High Variance | Model unstable | Learns noise | Random predictions | Dangerous |
-| Result | Inconsistent predictions | Poor generalization | Test failure | Needs simplification |
+| Low | Linear Regression | Limited | Underfitting | Weak |
+| Medium | Random Forest | Balanced | Lower | Better |
+| High | Deep Neural Network | Very flexible | Overfitting | Risky |
 
 ---
 
-## 6.7 Bias vs Variance Tradeoff
+## 6.9.2 Example A: Neural Network Complexity
 
-| Topic | Definition | How It Works | Example | Important Notes |
+```text
+Small dataset:
+1,000 rows
+
+Huge neural network:
+10 million parameters
+
+Result:
+Overfitting risk becomes high
+```
+
+---
+
+# 6.10 Noise in Data
+
+This section explains random bad data.
+
+Noise confuses learning.
+
+---
+
+## 6.10.1 Example A: Wrong Label Noise
+
+```text
+Spam email labeled:
+Not Spam
+
+Model learns wrong pattern
+```
+
+---
+
+## 6.10.2 Example B: Typing Error Noise
+
+```text
+House price:
+RM500,000
+
+Mistyped as:
+RM5,000,000
+```
+
+---
+
+# 6.11 Outliers
+
+This section explains extremely unusual values.
+
+---
+
+## 6.11.1 Example A: House Price Outlier
+
+```text
+Most houses:
+RM500,000
+
+One house:
+RM50,000,000
+
+Model becomes distorted
+```
+
+---
+
+## 6.11.2 Example B: Salary Outlier
+
+```text
+Most salaries:
+RM5,000
+
+One CEO salary:
+RM500,000
+```
+
+---
+
+# 6.12 Data Leakage
+
+This section explains one of the most dangerous ML mistakes.
+
+The model accidentally sees future information.
+
+---
+
+## 6.12.1 Example A: Medical Leakage (Detailed)
+
+```text
+Features include:
+Final diagnosis report
+
+Problem:
+Diagnosis report already contains answer
+
+Model gets fake high accuracy
+```
+
+---
+
+## 6.12.2 Example B: Student Exam Leakage
+
+```text
+Training data accidentally contains test answers
+
+Model scores:
+99%
+
+Real-world performance:
+Poor
+```
+
+---
+
+# 6.13 Class Imbalance
+
+This section explains unequal class distribution.
+
+Very common in fraud detection.
+
+---
+
+## 6.13.1 Class Imbalance Example (Detailed)
+
+```text
+1,000 transactions
+
+990 Normal
+10 Fraud
+
+Model predicts:
+Everything = Normal
+
+Accuracy:
+99%
+
+Reality:
+Fraud detection failed
+```
+
+---
+
+# 6.14 Training Curve Problem Detection
+
+This section explains how training metrics reveal problems.
+
+| Training Error | Validation Error | Problem | Meaning | Action |
 | --- | --- | --- | --- | --- |
-| Bias-Variance Tradeoff | Balance between simple and complex models | Increase complexity → lower bias but higher variance | Decision tree depth | Core ML concept |
-| Goal | Keep both low | Find balanced model | Good fit | Important tuning concept |
+| High | High | Underfitting | Weak model | Increase complexity |
+| Low | High | Overfitting | Memorization | Regularization |
+| Low | Low | Good Fit | Healthy model | Maintain |
 
 ---
 
-## 6.8 Model Complexity
+## 6.14.1 Example A: Training Curve Reading
 
-| Topic | Definition | How It Works | Example | Important Notes |
-| --- | --- | --- | --- | --- |
-| Model Complexity | How flexible a model is | More parameters = more flexibility | Deep neural network | Can overfit |
-| Low Complexity | Simple model | Limited learning | Linear regression | High bias |
-| High Complexity | Complex model | Learns detailed patterns | Deep tree | High variance |
+```text
+Train accuracy:
+99%
 
----
+Validation accuracy:
+70%
 
-## 6.9 Noise in Data
-
-| Topic | Definition | How It Works | Example | Important Notes |
-| --- | --- | --- | --- | --- |
-| Noise | Random incorrect data | Misleads learning | Wrong house price | Common issue |
-| Data Errors | Wrong labels/values | Creates confusion | Spam marked normal | Reduces accuracy |
-| Random Patterns | Model learns useless information | Overfitting risk | Outlier values | Needs cleaning |
+Problem:
+Overfitting
+```
 
 ---
 
-## 6.10 Outliers
+# 6.15 Real-World Debugging Example
 
-| Topic | Definition | How It Works | Example | Important Notes |
-| --- | --- | --- | --- | --- |
-| Outliers | Extremely unusual values | Distorts learning | RM50 million house | Common in regression |
-| Impact | Pulls predictions | Creates wrong patterns | Salary prediction issues | Must detect carefully |
+This section connects everything together.
 
----
-
-## 6.11 Data Leakage
-
-| Topic | Definition | How It Works | Example | Important Notes |
-| --- | --- | --- | --- | --- |
-| Data Leakage | Model accidentally learns future/test information | Gets unfair advantage | Test data used in training | Fake high accuracy |
-| Problem | Unrealistic performance | Fails in production | 99% test accuracy | Must avoid |
-
----
-
-## 6.12 Class Imbalance
-
-| Topic | Definition | How It Works | Example | Important Notes |
-| --- | --- | --- | --- | --- |
-| Class Imbalance | One class has much more data than another | Model ignores rare classes | Fraud detection | Common classification issue |
-| Example | 99 normal transactions, 1 fraud | Predicts everything normal | High fake accuracy | Dangerous |
-
----
-
-## 6.13 Training Curve Problem Detection
-
-| Scenario | Training Error | Validation Error | Problem |
-| --- | --- | --- | --- |
-| High train + high validation | High | High | Underfitting |
-| Low train + high validation | Low | High | Overfitting |
-| Low train + low validation | Low | Low | Good fit |
-
----
-
-## 6.14 Real World Example
-
-### House Price Model
+### House Price Model Debugging
 
 | Situation | Problem | Result | Example | Fix |
 | --- | --- | --- | --- | --- |
-| Very simple model | Underfitting | Poor predictions | Straight line for complex pricing | Use better model |
+| Very simple model | Underfitting | Poor predictions | Straight line pricing | Better model |
 | Very complex model | Overfitting | Memorization | Deep tree | Regularization |
-| Balanced model | Good fit | Strong predictions | Stable pricing model | Maintain balance |
+| Dirty dataset | Noise | Wrong learning | Wrong prices | Data cleaning |
+| Leakage | Fake success | Production failure | Future data | Remove leakage |
 
 ---
 
-## 6.15 Why Model Issues Matter
+## 6.15.1 Full Debugging Flow
 
-| Reason | Explanation | Example | Business Impact | Notes |
-| --- | --- | --- | --- | --- |
-| Prevent bad models | Detect problems early | Overfitting detection | Save money | Important |
-| Improve accuracy | Fix weak models | Better fraud detection | Better business decisions | Critical |
-| Better generalization | Perform well on new data | New customers | Real-world success | Required |
+```text
+Bad performance
+→ Identify issue
+→ Diagnose cause
+→ Apply fix
+→ Retrain model
+→ Re-evaluate
+```
 
 ---
 
-## 6.16 Final Summary
+# 6.16 Why Model Issues Matter
 
-| Question | Answer | Example | Notes | Importance |
+This section explains why debugging skills matter.
+
+| Reason | Example | Business Impact | Result | Importance |
 | --- | --- | --- | --- | --- |
-| What is underfitting? | Model too simple | Weak predictions | High errors | Important |
-| What is overfitting? | Model memorizes data | Bad future predictions | Low train/high test error | Very important |
-| What is bias? | Too simple assumptions | Underfitting | Low flexibility | Core concept |
-| What is variance? | Too sensitive to data | Overfitting | Unstable predictions | Core concept |
-| Why learn this? | Most models fail here first | Real-world ML debugging | Essential skill | Critical |
+| Prevent bad deployment | Fraud model fails | Financial loss | Major issue | High |
+| Improve accuracy | Better healthcare predictions | Better treatment | Stronger model | High |
+| Better generalization | New customer predictions | Better business decisions | Reliable AI | Critical |
+
+---
+
+# 6.17 Final Summary
+
+This section summarizes model issues.
+
+```text
+Underfitting → Too Simple
+
+Overfitting → Too Complex
+
+Good Fit → Balanced
+
+Noise → Bad Data
+
+Leakage → Fake Accuracy
+
+Class Imbalance → Misleading Accuracy
+```
+
+Core lesson:
+
+```text
+Good model performance requires:
+
+Good data
++ Balanced model complexity
++ Proper evaluation
+```
+
+Next topic:
+
+```text
+Improvement Techniques
+```
