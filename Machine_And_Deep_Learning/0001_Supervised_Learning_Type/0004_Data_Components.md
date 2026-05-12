@@ -99,7 +99,6 @@ Bad data → Bad model predictions
 | Random Shuffle | Mix data before splitting | Prevent bias | Random customer order | Important |
 | No Overlap | Same data cannot appear twice | Prevent leakage | Duplicate records | Critical |
 
----
 
 ## 4.8.1 Common Split Ratios
 
@@ -161,7 +160,6 @@ Bad data → Bad model predictions
 | Real Estate | Size, location | House price | Predict price | Property website |
 | Healthcare | Age, symptoms | Disease type | Predict illness | Hospital system |
 
----
 
 ## 4.13.1 House Price Dataset Example
 
@@ -169,7 +167,6 @@ Bad data → Bad model predictions
 | --- | --- | --- | --- | --- |
 | House size | Location | Number of rooms | Price | Predict future house prices |
 
----
 
 ## 4.13.2 Medical Dataset Example
 
@@ -177,7 +174,6 @@ Bad data → Bad model predictions
 | --- | --- | --- | --- | --- |
 | Age | Blood pressure | Symptoms | Disease type | Predict illness |
 
----
 
 ## 4.14 Why Data Components Matter
 
