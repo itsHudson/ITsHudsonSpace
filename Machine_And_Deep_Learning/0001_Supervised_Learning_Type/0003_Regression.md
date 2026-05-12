@@ -21,7 +21,7 @@ Regression answers:
 
 ---
 
-## 3.1 Regression Examples Used Throughout This Section
+# 3.1 Regression Examples Used Throughout This Section
 
 This section introduces the examples reused throughout the entire regression topic.
 
