@@ -1,632 +1,193 @@
 # 2. CLASSIFICATION (PREDICT CATEGORIES / LABELS / DECISIONS)
 
-## 2.1 What is Classification?
+---
 
-**Classification** is a type of **Supervised Learning (SL)** where a machine learns from past labeled data and predicts a **category**, **group**, or **decision** for new data.
+# 2.1 Definition
 
-The output is **NOT a number** like regression.
-
-The output must be a **fixed label/category**.
+| Topic | Definition | How It Works | Example | Important Notes |
+| --- | --- | --- | --- | --- |
+| Classification | A type of **Supervised Learning (SL)** that predicts a category, label, or decision instead of a number | The model learns from past labeled data and chooses the correct category for new data | Spam / Not Spam | Output must be a fixed category |
+| Main Goal | Identify which group something belongs to | Compare input patterns with learned patterns | Cat / Dog | Used for decision-making problems |
+| Output Type | Categorical output | Returns labels/classes | Approve / Reject | Different from regression |
 
 ---
 
-## Simple Meaning (Very Easy Version)
+# 2.2 Simple Classification Flow
 
-Classification is like asking:
-
-> "Which group does this belong to?"
-
-The machine looks at input data, learns patterns from old examples, then chooses the correct category.
-
----
-
-## Real Life Human Example
-
-Imagine a teacher checking exam papers:
-
-Student Score = 95 → Grade A  
-Student Score = 70 → Grade B  
-Student Score = 40 → Grade C  
-
-Teacher is classifying students into categories.
+| Step | Process | Input | Output | Purpose |
+| --- | --- | --- | --- | --- |
+| 1 | Collect Input Data | Email text | Raw email | Provide data to model |
+| 2 | Feature Checking | Words, links, sender info | Important patterns | Find useful signals |
+| 3 | Pattern Matching | Compare with learned spam patterns | Probability scores | Decide likely category |
+| 4 | Final Prediction | Model selects category | Spam | Final classification result |
 
 ---
 
-Another example:
+## General Formula
 
-Doctor checks patient symptoms:
-
-- Fever
-- Cough
-- Headache
-
-Doctor decides:
-
-- Flu
-- COVID-19
-- Normal Cold
-
-This is classification.
+| Component | Meaning | Example | Output | Notes |
+| --- | --- | --- | --- | --- |
+| X | Input features | Age, salary | Raw data | Information given to model |
+| f(X) | Learning model | Decision Tree | Pattern learning | Model process |
+| Y | Output label | Approve/Reject | Final prediction | Category result |
 
 ---
 
-## Machine Learning Example
+## Formula Representation
 
-Email message:
-
-> "Congratulations! You won $10,000"
-
-Machine checks:
-
-- suspicious words
-- links
-- sender information
-
-Output:
-
-- Spam
-- Not Spam
+| Formula | Meaning | Example | Output | Notes |
+| --- | --- | --- | --- | --- |
+| `f(X) = Y` | Model converts input into category output | Email → Spam | Category | Core idea of classification |
 
 ---
 
-# 2.2 Why Classification is Important?
+# 2.3 Why Classification is Important
 
-Many real-world systems need to make decisions.
-
-Businesses usually do not ask:
-
-> "Give me a random number"
-
-They ask:
-
-- Should we approve this loan?
-- Is this transaction fraud?
-- Is this customer likely to leave?
-- Which animal is this?
-- Is this disease dangerous?
-
-Classification helps automate these decisions.
+| Industry | Problem | Classification Output | Why It Matters | Example |
+| --- | --- | --- | --- | --- |
+| Banking | Loan approval | Approve / Reject | Faster decisions | Bank loans |
+| Banking | Fraud detection | Fraud / Not Fraud | Prevent losses | Credit card fraud |
+| Healthcare | Disease diagnosis | Sick / Healthy | Faster treatment | Disease prediction |
+| Email | Spam filtering | Spam / Not Spam | Cleaner inbox | Gmail spam filter |
+| Education | Student grading | Grade A/B/C | Faster grading | School systems |
+| Retail | Purchase prediction | Buy / Not Buy | Better marketing | Product recommendations |
 
 ---
 
-# 2.3 Input and Output in Classification
+# 2.4 Input Components
 
-| Component | Meaning | Example |
-|------------|----------|----------|
-| Input Data (X) | Information given to the model | Age, salary, email text |
-| Features | Individual pieces of input data | age = 25 |
-| Model | Learns patterns from training data | Decision Tree |
-| Output Label (Y) | Final predicted category | Approve / Reject |
-
----
-
-## Example 1: Loan Approval
-
-Input:
-
-- Salary = RM5000
-- Credit Score = Good
-- Debt = Low
-
-Output:
-
-- Approve Loan
-
-OR
-
-- Reject Loan
+| Component | Definition | Example | Why Important | Notes |
+| --- | --- | --- | --- | --- |
+| Features | Individual input variables | Age | Helps model learn patterns | Also called variables |
+| Dataset | Collection of training data | Customer records | Needed for training | Large datasets improve learning |
+| Labels | Correct answers | Spam | Teach model correct output | Required in supervised learning |
+| Training Data | Data used for learning | Past fraud records | Helps model learn | Usually largest portion |
+| Testing Data | Data used for evaluation | New fraud records | Measures performance | Usually smaller portion |
 
 ---
 
-## Example 2: Animal Classification
+# 2.5 Types of Classification
 
-Input:
-
-- Has fur
-- Four legs
-- Barks
-
-Output:
-
-- Dog
+| Type | Definition | Number of Outputs | Example | Important Notes |
+| --- | --- | --- | --- | --- |
+| Binary Classification | Predicts one of two classes | 2 | Yes/No | Most common beginner example |
+| Multi-Class Classification | Predicts one class from many classes | More than 2 | Cat/Dog/Bird | Only one final output |
+| Multi-Label Classification | Predicts multiple labels at once | Multiple outputs | Dog + Tree + Car | One input can have many labels |
 
 ---
 
-# 2.4 Full Classification Flow (Step-by-Step)
-
----
-
-### Step 1: Collect Data
-
-Gather past examples.
-
-Example:
-
-| Email Text | Label |
-|-------------|---------|
-| Win money now | Spam |
-| Meeting at 3PM | Not Spam |
-
-The label tells the machine the correct answer.
-
----
-
-### Step 2: Clean Data
-
-Remove bad or missing data.
-
-Example:
-
-Wrong email text  
-Empty rows  
-Duplicate rows
-
----
-
-### Step 3: Split Data
-
-Usually:
-
-- Training Data = 80%
-- Testing Data = 20%
-
-Training data teaches the model.
-
-Testing data checks performance.
-
----
-
-### Step 4: Train Model
-
-The machine finds patterns.
-
-Example:
-
-Emails with words like:
-
-- Free
-- Prize
-- Winner
-
-may often be spam.
-
----
-
-### Step 5: Make Prediction
-
-New email arrives:
-
-> "Claim your free reward"
-
-Model predicts:
-
-Spam
-
----
-
-### Step 6: Evaluate Performance
-
-Check if model is accurate.
-
-Example:
-
-Out of 100 emails:
-
-Correct = 95  
-Wrong = 5  
-
-Accuracy = 95%
-
----
-
-# 2.5 Mathematical Representation
-
-Input features:
-
-X
-
-Output label:
-
-Y
-
-Goal:
-
-Learn function:
-
-:contentReference[oaicite:0]{index=0}
-
-Meaning:
-
-Machine learns how to convert input data into correct category output.
-
----
-
-# 2.6 Types of Classification
-
----
-
-## A. Binary Classification
-
-Only **2 possible outputs**
-
-Examples:
-
-- Yes / No
-- True / False
-- Spam / Not Spam
-- Fraud / Not Fraud
-- Pass / Fail
-
----
-
-### Example
-
-Bank loan system:
-
-Output:
-
-- Approve
-- Reject
-
-Only two choices.
-
----
-
-## B. Multi-Class Classification
-
-More than 2 categories.
-
-Examples:
-
-- Cat
-- Dog
-- Bird
-
-OR
-
-- Grade A
-- Grade B
-- Grade C
-- Grade D
-
----
-
-### Example
-
-Handwritten digit recognition:
-
-Output:
-
-0,1,2,3,4,5,6,7,8,9
-
----
-
-## C. Multi-Label Classification
-
-One input can have multiple labels at the same time.
-
----
-
-Example:
-
-Photo contains:
-
-- Dog
-- Tree
-- Car
-
-One image → many labels
+# 2.6 Full Classification Workflow
+
+| Step | Process | Input | Output | Purpose |
+| --- | --- | --- | --- | --- |
+| 1 | Data Collection | Raw business data | Dataset | Gather information |
+| 2 | Data Cleaning | Raw dataset | Clean dataset | Remove errors |
+| 3 | Data Splitting | Clean dataset | Train/Test sets | Fair evaluation |
+| 4 | Model Training | Training data | Trained model | Learn patterns |
+| 5 | Model Testing | Testing data | Accuracy results | Measure performance |
+| 6 | Prediction | New unseen data | Predicted label | Real-world usage |
+| 7 | Improvement | Weak model | Better model | Improve performance |
+| 8 | Deployment | Final model | Real system | Business usage |
 
 ---
 
 # 2.7 Common Classification Algorithms
 
----
-
-## 1. Logistic Regression (LR)
-
-Despite the name "regression", it is used for classification.
-
-Used for:
-
-- Yes/No prediction
-- Simple binary problems
-
-Example:
-
-Will customer buy product?
-
-- Yes
-- No
+| Algorithm | Full Form | How It Works | Example | Limitation |
+| --- | --- | --- | --- | --- |
+| Logistic Regression (LR) | Logistic Regression | Uses probability to predict categories | Loan approval | Struggles with complex patterns |
+| Decision Tree (DT) | Decision Tree | Uses rule-based splitting | Student pass/fail | Can overfit |
+| Random Forest (RF) | Random Forest | Combines multiple trees | Fraud detection | Slower than single tree |
+| Support Vector Machine (SVM) | Support Vector Machine | Finds best separation boundary | Image classification | Hard with huge datasets |
+| K-Nearest Neighbors (KNN) | K-Nearest Neighbors | Looks at nearest similar data | Fruit classification | Slow with large data |
+| Naive Bayes (NB) | Naive Bayes | Uses probability rules | Spam detection | Assumes feature independence |
+| Neural Network (NN) | Neural Network | Learns complex patterns using layers | Face recognition | Requires large data |
 
 ---
 
-## 2. Decision Tree (DT)
+# 2.8 Model Output Types
 
-Makes decisions like asking questions.
-
-Example:
-
-Age > 18?
-
-Yes → Continue  
-No → Stop
+| Output Type | Definition | Example | Why Useful | Notes |
+| --- | --- | --- | --- | --- |
+| Predicted Label | Final selected category | Spam | Easy decision-making | Most common output |
+| Probability Score | Confidence percentage | Spam = 95% | Shows confidence level | Often used in healthcare/finance |
+| Ranking Output | Sorts possible classes | Product recommendation | Better recommendations | Less common |
 
 ---
 
-## 3. Random Forest (RF)
+# 2.9 Evaluation Metrics
 
-Uses many decision trees together.
-
-Final answer comes from majority voting.
-
-Example:
-
-10 trees vote:
-
-7 say Fraud  
-3 say Not Fraud
-
-Final output:
-
-Fraud
+| Metric | Formula | What It Measures | Example | When to Use |
+| --- | --- | --- | --- | --- |
+| Accuracy | Correct Predictions / Total Predictions | Overall correctness | 95 correct out of 100 | Balanced datasets |
+| Precision | True Positive / (True Positive + False Positive) | Correct positive predictions | Fraud alerts | When false alarms are costly |
+| Recall | True Positive / (True Positive + False Negative) | Finds actual positives | Disease detection | When missing cases is dangerous |
+| F1 Score | Balance of Precision + Recall | Overall balance | Fraud detection | Imbalanced datasets |
+| Confusion Matrix | Table of prediction results | Shows mistakes | TP/TN/FP/FN | Error analysis |
 
 ---
 
-## 4. Support Vector Machine (SVM)
+# 2.10 Confusion Matrix Terms
 
-Finds the best boundary between categories.
-
-Example:
-
-Separate cats from dogs.
-
----
-
-## 5. K-Nearest Neighbors (KNN)
-
-Full form:
-
-K-Nearest Neighbors (KNN)
-
-Looks at nearby similar data points.
-
-Example:
-
-Most nearby fruits are apples → predict apple.
+| Term | Full Form | Meaning | Example | Notes |
+| --- | --- | --- | --- | --- |
+| TP | True Positive | Correct positive prediction | Fraud predicted as fraud | Good prediction |
+| TN | True Negative | Correct negative prediction | Normal predicted as normal | Good prediction |
+| FP | False Positive | Wrong positive prediction | Normal predicted as fraud | False alarm |
+| FN | False Negative | Wrong negative prediction | Fraud predicted as normal | Dangerous mistake |
 
 ---
 
-## 6. Naive Bayes (NB)
+# 2.11 Common Problems in Classification
 
-Uses probability.
-
-Often used for text classification.
-
-Example:
-
-Spam detection
-
----
-
-## 7. Neural Network (NN)
-
-Works well for complex tasks.
-
-Used in:
-
-- Image recognition
-- Speech recognition
-- Deep learning systems
+| Problem | Definition | Cause | Example | Solution |
+| --- | --- | --- | --- | --- |
+| Overfitting | Model memorizes training data | Too complex model | High train accuracy, low test accuracy | Regularization |
+| Underfitting | Model too simple | Weak learning | Poor predictions | Use better model |
+| Imbalanced Dataset | One class dominates | Unequal data | 99 normal, 1 fraud | Resampling |
+| Noisy Data | Poor quality data | Wrong labels | Incorrect training examples | Data cleaning |
 
 ---
 
-# 2.8 Classification Output
+# 2.12 Classification vs Regression
 
-The model may return:
-
----
-
-## A. Predicted Label
-
-Example:
-
-Spam
+| Feature | Classification | Regression | Similarity | Example |
+| --- | --- | --- | --- | --- |
+| Output | Category | Number | Both are supervised learning | Spam vs house price |
+| Goal | Choose class | Predict value | Learn patterns | Fraud vs temperature |
+| Result Type | Fixed labels | Continuous values | Use training data | Approve vs salary |
 
 ---
 
-## B. Probability Score
+# 2.13 Real World Applications
 
-Example:
-
-Spam = 95%  
-Not Spam = 5%
-
-Final answer:
-
-Spam
-
----
-
-# 2.9 How We Measure Classification Performance
+| Industry | Input | Model Task | Output | Example |
+| --- | --- | --- | --- | --- |
+| Banking | Credit score | Loan approval | Approve/Reject | Loan system |
+| Healthcare | Symptoms | Disease prediction | Sick/Healthy | Hospital AI |
+| Retail | Customer behavior | Purchase prediction | Buy/Not Buy | E-commerce |
+| Security | Face image | Face recognition | Person identity | Phone unlock |
+| Email | Email text | Spam detection | Spam/Not Spam | Gmail |
 
 ---
 
-## Accuracy
+# 2.14 End-to-End Example (Fraud Detection System)
 
-How many predictions are correct?
-
-Formula:
-
-:contentReference[oaicite:1]{index=1}
-
-Example:
-
-90 correct out of 100
-
-Accuracy = 90%
+| Step | Input | Process | Output | Purpose |
+| --- | --- | --- | --- | --- |
+| 1 | Transaction records | Collect historical data | Dataset | Prepare training data |
+| 2 | Fraud labels | Label transactions | Labeled dataset | Teach model |
+| 3 | Training data | Train model | Trained classifier | Learn fraud patterns |
+| 4 | Testing data | Evaluate model | Performance score | Check quality |
+| 5 | New transaction | Predict fraud | Fraud/Not Fraud | Real-time decision |
 
 ---
 
-## Precision
-
-Out of predicted positives:
-
-How many are truly correct?
-
-Example:
-
-Fraud alerts generated = 20
-
-Actual fraud = 15
-
-Precision = 75%
-
----
-
-## Recall
-
-Out of actual positives:
-
-How many were found?
-
-Example:
-
-20 fraud cases exist
-
-Model found 18
-
-Recall = 90%
-
----
-
-## F1 Score
-
-Balances precision and recall.
-
-Useful when classes are imbalanced.
-
----
-
-## Confusion Matrix
-
-Shows:
-
-- True Positive (TP)
-- True Negative (TN)
-- False Positive (FP)
-- False Negative (FN)
-
-Helps understand mistakes.
-
----
-
-# 2.10 Real World Use Cases
-
-| Industry | Problem | Output |
-|-----------|-----------|----------|
-| Banking | Loan approval | Approve / Reject |
-| Banking | Fraud detection | Fraud / Not Fraud |
-| Healthcare | Disease prediction | Sick / Healthy |
-| Email | Spam detection | Spam / Not Spam |
-| Shopping | Product recommendation category | Buy / Not Buy |
-| Schools | Student grading | Grade A/B/C |
-
----
-
-# 2.11 Classification vs Regression
-
-| Classification | Regression |
-|----------------|-------------|
-| Predict category | Predict number |
-| Output labels | Output continuous values |
-| Spam / Not Spam | House price prediction |
-| Cat / Dog | Temperature prediction |
-
----
-
-## Example
-
-Classification:
-
-"Is this fruit an apple or orange?"
-
-Regression:
-
-"What is the exact weight of this fruit?"
-
----
-
-# 2.12 Common Problems in Classification
-
----
-
-## Overfitting
-
-Model memorizes training data too much.
-
-Performs badly on new data.
-
----
-
-## Underfitting
-
-Model too simple.
-
-Cannot learn patterns properly.
-
----
-
-## Imbalanced Dataset
-
-One class has too much data.
-
-Example:
-
-99 normal transactions  
-1 fraud transaction
-
-Model may struggle.
-
----
-
-## Noisy Data
-
-Wrong labels
-
-Missing values
-
-Bad quality data
-
----
-
-# 2.13 Final Full Flow Example
-
-Online shopping fraud detection:
-
-Step 1: Collect old transaction data  
-Step 2: Label fraud/not fraud  
-Step 3: Train model  
-Step 4: Test model  
-Step 5: Deploy model  
-Step 6: Detect fraud in real time
-
----
-
-## Final Summary
-
-Classification answers:
-
-> "Which category does this belong to?"
-
-It is used when output must be a fixed decision.
-
-Examples:
-
-- Spam / Not Spam
-- Approve / Reject
-- Fraud / Not Fraud
-- Cat / Dog
-- Sick / Healthy
-
-This is one of the most common Machine Learning tasks in real businesses.
+# 2.15 Final Summary
+
+| Question | Answer | Example | Notes | Importance |
+| --- | --- | --- | --- | --- |
+| What does classification do? | Predict categories | Spam detection | Most common ML task | Very important |
+| What output does it give? | Labels | Yes/No | Not numbers | Key difference |
+| When should it be used? | Fixed decisions | Loan approval | Binary/Multi-class | Common in business |
+| Why learn it? | Many real systems use it | Fraud detection | Foundation topic | Required in ML |
