@@ -174,6 +174,7 @@ Bad data → Bad model predictions
 | --- | --- | --- | --- | --- |
 | Age | Blood pressure | Symptoms | Disease type | Predict illness |
 
+---
 
 ## 4.14 Why Data Components Matter
 
