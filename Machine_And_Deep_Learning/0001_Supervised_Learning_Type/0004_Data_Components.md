@@ -101,13 +101,13 @@ Bad data → Bad model predictions
 
 ---
 
-## Common Split Ratios
+## 4.8.1 Common Split Ratios
 
-| Training Set | Validation Set | Test Set | Usage |
-| --- | --- | --- | --- |
-| 80% | 10% | 10% | Very common |
-| 70% | 15% | 15% | Balanced split |
-| 60% | 20% | 20% | Small datasets |
+| Training Set | Validation Set | Test Set | Usage | Notes |
+| --- | --- | --- | --- | --- |
+| 80% | 10% | 10% | Very common | Balanced for large datasets |
+| 70% | 15% | 15% | Balanced split | Common choice |
+| 60% | 20% | 20% | Small datasets | More evaluation data |
 
 ---
 
@@ -116,7 +116,7 @@ Bad data → Bad model predictions
 | Topic | Definition | How It Works | Example | Important Notes |
 | --- | --- | --- | --- | --- |
 | Data Leakage | Model accidentally learns future/test information | Model gets unfair advantage | Using test data in training | Very dangerous |
-| Fake High Accuracy | Results look very good | Model cheats | 99% test accuracy | Misleading |
+| Fake High Accuracy | Results look very good | Model cheats | 99% accuracy | Misleading |
 | Real World Failure | Performs badly later | Cannot generalize | Production failure | Must avoid |
 
 ---
@@ -126,7 +126,7 @@ Bad data → Bad model predictions
 | Topic | Definition | How It Works | Example | Important Notes |
 | --- | --- | --- | --- | --- |
 | Good Features | Useful input variables | Helps model learn correctly | Salary | Improves accuracy |
-| Bad Features | Irrelevant/noisy inputs | Confuses model | Random ID | Hurts performance |
+| Bad Features | Irrelevant inputs | Confuses model | Random ID | Hurts performance |
 | Missing Features | Important variables missing | Weak predictions | Missing credit score | Lower performance |
 
 ---
@@ -150,13 +150,20 @@ Bad data → Bad model predictions
 | Missing Values | Empty data | Missing salary | Weak model | Imputation |
 | Duplicate Data | Same records repeated | Same customer twice | Bias | Remove duplicates |
 | Wrong Labels | Incorrect outputs | Spam marked normal | Wrong learning | Fix labels |
-| Noise | Random bad data | Typing errors | Lower accuracy | Cleaning |
+| Noise | Random bad data | Typing errors | Lower accuracy | Data cleaning |
 
 ---
 
-## 4.13 Real World Example
+## 4.13 Real World Examples
 
-### House Price Dataset
+| Industry | Input Features | Label | Goal | Example |
+| --- | --- | --- | --- | --- |
+| Real Estate | Size, location | House price | Predict price | Property website |
+| Healthcare | Age, symptoms | Disease type | Predict illness | Hospital system |
+
+---
+
+## 4.13.1 House Price Dataset Example
 
 | Feature 1 | Feature 2 | Feature 3 | Label | Prediction Goal |
 | --- | --- | --- | --- | --- |
@@ -164,7 +171,7 @@ Bad data → Bad model predictions
 
 ---
 
-### Medical Dataset
+## 4.13.2 Medical Dataset Example
 
 | Feature 1 | Feature 2 | Feature 3 | Label | Prediction Goal |
 | --- | --- | --- | --- | --- |
@@ -190,4 +197,4 @@ Bad data → Bad model predictions
 | What are features? | Input variables | House size | Model input | Very important |
 | What are labels? | Correct answers | House price | Model target | Required |
 | Why split dataset? | Fair training/testing | 80/10/10 split | Prevent cheating | Critical |
-| Why care about data quality? | Better models need better data | Clean dataset | Strong predictions | Foundation of ML |
+| Why care about data quality? | Better data = better model | Clean dataset | Strong predictions | Foundation of ML |
