@@ -100,7 +100,7 @@ Bad data → Bad model predictions
 | No Overlap | Same data cannot appear twice | Prevent leakage | Duplicate records | Critical |
 
 
-## 4.8.1 Common Split Ratios
+### 4.8.1 Common Split Ratios
 
 | Training Set | Validation Set | Test Set | Usage | Notes |
 | --- | --- | --- | --- | --- |
@@ -161,14 +161,14 @@ Bad data → Bad model predictions
 | Healthcare | Age, symptoms | Disease type | Predict illness | Hospital system |
 
 
-## 4.13.1 House Price Dataset Example
+### 4.13.1 House Price Dataset Example
 
 | Feature 1 | Feature 2 | Feature 3 | Label | Prediction Goal |
 | --- | --- | --- | --- | --- |
 | House size | Location | Number of rooms | Price | Predict future house prices |
 
 
-## 4.13.2 Medical Dataset Example
+### 4.13.2 Medical Dataset Example
 
 | Feature 1 | Feature 2 | Feature 3 | Label | Prediction Goal |
 | --- | --- | --- | --- | --- |
