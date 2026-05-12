@@ -256,8 +256,9 @@ Regression answers:
 
 ---
 
-## 3.27 Regression vs Classification
+# 3F Overview
 
+## 3.27 Regression vs Classification
 | Feature | Regression | Classification | Difference | Example |
 | --- | --- | --- | --- | --- |
 | Output | Number | Category | Main difference | House price vs Spam |
