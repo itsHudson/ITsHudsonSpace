@@ -578,8 +578,3 @@ Train Model
 → Improve System
 ```
 
-Next topic:
-
-```text
-Complete Machine Learning Pipeline
-```
