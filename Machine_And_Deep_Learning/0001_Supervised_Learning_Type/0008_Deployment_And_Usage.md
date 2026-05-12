@@ -22,7 +22,7 @@ Common real-world goals:
 
 ---
 
-## 8.1 Deployment Examples Used Throughout This Section
+# 8.1 Deployment Examples Used Throughout This Section
 
 This section introduces examples reused throughout this topic.
 
