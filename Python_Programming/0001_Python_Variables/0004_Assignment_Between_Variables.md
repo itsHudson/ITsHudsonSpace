@@ -1,4 +1,4 @@
-# Python Lesson — Assignment Between Variables (Reference Copy) 
+# Python Lesson — Assignment Between Variables
 
 ---
 
