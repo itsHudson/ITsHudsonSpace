@@ -1,490 +1,680 @@
-# 1. Introduction to SQL
-
-> Level: 🟢 Beginner  
-> Estimated Learning Time: 45–90 Minutes  
-> Prerequisites:
->
-> - Basic computer knowledge
-> - Basic understanding of applications/websites
-> - No programming experience required
-
----
-
 # 1.1 SQL Fundamentals
 
-SQL Fundamentals is the foundation of database learning.
+---
 
-Before learning:
-
-- joins
-- subqueries
-- indexing
-- optimization
-- transactions
-- warehousing
-
-you must first understand:
-
-- what SQL is
-- why SQL exists
-- where SQL is used
-- how SQL connects with real applications
+## 1.1.1 What is SQL
 
 ---
 
-## 1.1.1 Learning Objectives
-
-After completing this section, you should understand:
-
-- what SQL is
-- what databases are
-- how SQL works
-- why companies use SQL
-- how SQL is used in applications
-- the difference between SQL and NoSQL
-- how SQL is used in backend systems
-- how SQL is used in analytics and machine learning
+### 1.1.1.1 Definition of SQL
 
 ---
-
-# 1.2 What is SQL?
-
----
-
-## Definition
 
 SQL stands for:
 
-**Structured Query Language**
-
-SQL is a language used to communicate with relational databases.
-
-Using SQL, users can:
-
-- retrieve data
-- insert data
-- update data
-- delete data
-- create tables
-- manage users
-- control transactions
-
----
-
-## Why SQL Exists
-
-Before databases became modernized, managing records was difficult.
-
-Companies needed a standard way to:
-
-- store information
-- organize records
-- search data quickly
-- update records safely
-
-SQL became the universal language for structured data management.
-
----
-
-## Real-Life Analogy
-
-Think of a database like a school office filing system.
-
-### Real-Life Structure
-
-In a school office:
-
-- A cabinet stores all records
-- A folder stores one category
-- A paper sheet stores one student record
-- Each field stores one piece of information
-
-Example student information:
-
-- Student ID
-- Student Name
-- Age
-- Course
-
----
-
-## Database Equivalent
-
-| Real-Life Item | Database Equivalent |
+| Term | Meaning |
 |---|---|
-| Cabinet | Database |
-| Folder | Table |
-| Paper Sheet | Row |
-| Information Field | Column |
+| S | Structured |
+| Q | Query |
+| L | Language |
+
+SQL is a specialized language used to:
+
+- Store data
+- Retrieve data
+- Manage data
+- Modify data
+- Organize relational databases
+- Control database access
+- Perform analytics on data
+
+SQL is mainly used with:
+
+- Relational Database Management Systems (RDBMS)
+- Data warehouses
+- Analytical databases
+- Cloud databases
+- Enterprise systems
 
 ---
 
-## Example Table
-
-Student table:
-
-| student_id | name | age | course |
-|---|---|---|---|
-| 1 | John | 20 | IT |
-| 2 | Sarah | 21 | Business |
+### 1.1.1.2 What is a Database
 
 ---
 
-## Understanding the Table
+A database is an organized collection of data stored electronically.
 
-### Columns
+Real-world examples:
 
-Columns represent categories of information.
+| System | Stored Data |
+|---|---|
+| Banking System | Customer accounts, transactions |
+| E-Commerce Website | Products, orders, users |
+| Hospital System | Patients, doctors, appointments |
+| School System | Students, courses, grades |
+| Social Media | Posts, likes, comments |
 
-Example columns:
+Without databases:
 
-- `student_id`
-- `name`
-- `age`
-- `course`
-
----
-
-### Rows
-
-Rows represent individual records.
-
-Example rows:
-
-- John's student record
-- Sarah's student record
+- Data becomes messy
+- Searching becomes difficult
+- Updating information becomes slow
+- Systems cannot scale properly
 
 ---
 
-## What SQL Can Do
+### 1.1.1.3 What is a Relational Database
 
-| Task | Purpose | SQL Command |
+---
+
+A relational database stores data in tables.
+
+Example:
+
+#### Table: users
+
+| user_id | name | email |
 |---|---|---|
-| Retrieve Data | Read information | `SELECT` |
-| Insert Data | Add new records | `INSERT` |
-| Update Data | Modify existing records | `UPDATE` |
-| Delete Data | Remove records | `DELETE` |
-| Create Structures | Create tables/databases | `CREATE` |
-| Remove Structures | Delete tables/databases | `DROP` |
-| Manage Security | Control permissions | `GRANT` |
-| Manage Transactions | Save/revert changes | `COMMIT` |
+| 1 | Alice | alice@email.com |
+| 2 | Bob | bob@email.com |
+
+Each table contains:
+
+| Component | Meaning |
+|---|---|
+| Row | One record |
+| Column | One field |
+| Table | Collection of related records |
+
+Relationships connect tables together.
+
+Example:
+
+- Users table
+- Orders table
+- Payments table
+
+A user can have many orders.
 
 ---
 
-## Basic SQL Example
+### 1.1.1.4 Basic SQL Example
+
+---
+
+Example SQL query:
 
 ```sql
-SELECT name
-FROM students;
+SELECT name, email
+FROM users
+WHERE user_id = 1;
 ```
 
----
+Explanation:
 
-## Query Explanation
-
-| SQL Part | Meaning |
+| SQL Part | Purpose |
 |---|---|
-| `SELECT` | Choose data |
-| `name` | Select name column |
-| `FROM students` | Read from students table |
+| SELECT | Choose columns |
+| FROM | Choose table |
+| WHERE | Apply condition |
 
----
+Result:
 
-## Output Example
-
-| name |
-|---|
-| John |
-| Sarah |
-
----
-
-## Step-by-Step Workflow
-
-```text
-User Writes SQL Query
-        ↓
-Database Receives Query
-        ↓
-SQL Parser Checks Syntax
-        ↓
-Database Searches Data
-        ↓
-Results Returned To User
-```
-
----
-
-## Real-World Example
-
-### Example: Shopee Order History
-
-When users open order history:
-
-SQL retrieves:
-
-- order records
-- payment details
-- shipping information
-
----
-
-### Example: Netflix
-
-SQL retrieves:
-
-- account information
-- subscription plans
-- watch history
-
----
-
-> 💡 Beginner Note
->
-> SQL is NOT the database itself.
->
-> SQL is the language used to communicate with databases.
-
----
-
-## Common Beginner Mistakes
-
-| Mistake | Why It Is Wrong |
+| name | email |
 |---|---|
-| Thinking SQL is a database | SQL is only a language |
-| Thinking SQL only stores data | SQL also retrieves, updates, secures, and manages data |
-| Thinking SQL is only for programmers | Analysts and engineers also use SQL |
+| Alice | alice@email.com |
 
 ---
 
-## Key Takeaway
-
-SQL is the standard language used to communicate with relational databases.
+### 1.1.1.5 What SQL Can Do
 
 ---
 
-# 1.3 Why SQL is Important
+SQL can perform many operations.
 
-SQL is one of the most valuable technical skills in modern technology.
-
-Almost every industry stores structured data.
+| Category | Example |
+|---|---|
+| Create data | INSERT |
+| Read data | SELECT |
+| Update data | UPDATE |
+| Delete data | DELETE |
+| Create tables | CREATE TABLE |
+| Modify tables | ALTER TABLE |
+| Manage permissions | GRANT |
+| Control transactions | COMMIT |
 
 ---
 
-## Why Businesses Need SQL
+### 1.1.1.6 Real-World Analogy
 
-| Industry | Data Stored |
+---
+
+Think of a database like a library.
+
+| Library Component | Database Equivalent |
+|---|---|
+| Library | Database |
+| Bookshelf | Table |
+| Book | Row |
+| Book title | Column |
+| Librarian | Database administrator |
+| Searching books | SQL query |
+
+SQL acts like instructions given to the librarian.
+
+Example:
+
+- "Find all books written by John"
+- "Show books published after 2020"
+- "Delete damaged books"
+
+This is similar to SQL queries.
+
+---
+
+### 1.1.1.7 Beginner Mistakes
+
+---
+
+| Mistake | Explanation |
+|---|---|
+| Thinking SQL is a full programming language | SQL mainly focuses on data operations |
+| Confusing database with table | A database contains multiple tables |
+| Thinking SQL only stores data | SQL also analyzes and manages data |
+| Ignoring relationships | Relational databases depend heavily on relationships |
+
+---
+
+## 1.1.2 Why SQL is Important
+
+---
+
+### 1.1.2.1 SQL Powers Modern Systems
+
+---
+
+Almost every modern application uses SQL somewhere.
+
+Examples:
+
+| Industry | SQL Usage |
 |---|---|
 | Banking | Transactions |
+| E-Commerce | Orders and inventory |
 | Healthcare | Patient records |
-| E-commerce | Orders |
-| Education | Student records |
-| Government | Citizen records |
-| Social Media | User accounts |
+| Social Media | Posts and comments |
+| Logistics | Shipment tracking |
+| Education | Student systems |
+
+SQL is one of the most widely used technologies in the world.
 
 ---
 
-## Why Developers Need SQL
-
-Backend developers use SQL for:
-
-- login systems
-- payment systems
-- APIs
-- user accounts
-- inventory systems
+### 1.1.2.2 SQL Handles Massive Data
 
 ---
 
-## Why Data Engineers Need SQL
+Large companies store huge amounts of data.
 
-Data engineers use SQL for:
+Examples:
 
-- ETL pipelines
-- ELT pipelines
-- warehouse systems
-- data transformations
-
----
-
-## Why Analysts Need SQL
-
-Analysts use SQL for:
-
-- dashboards
-- reports
-- KPIs
-- customer analysis
-
----
-
-## Why ML Engineers Need SQL
-
-Machine learning engineers use SQL for:
-
-- data cleaning
-- feature engineering
-- dataset preparation
-
----
-
-## Real-World Workflow Example
-
-### Banking Transfer Example
-
-Imagine transferring RM500 using a banking app.
-
----
-
-### Workflow
-
-```text
-User Enters Transfer Amount
-           ↓
-Backend Receives Request
-           ↓
-SQL Query Executes
-           ↓
-Database Updates Balance
-           ↓
-Transfer Completed
-```
-
----
-
-### SQL Example
-
-```sql
-UPDATE accounts
-SET balance = balance - 500
-WHERE account_id = 101;
-```
-
----
-
-## Career Roles Using SQL
-
-| Career Role | Why SQL Is Needed |
+| Company Type | Example Data |
 |---|---|
-| Backend Engineer | Store application data |
-| Data Analyst | Generate reports |
+| E-Commerce | Millions of orders |
+| Social Media | Billions of posts |
+| Banking | Financial transactions |
+| Streaming Services | Watch history |
+
+SQL databases are designed to:
+
+- Organize large datasets
+- Retrieve data efficiently
+- Handle concurrent users
+- Maintain data consistency
+
+---
+
+### 1.1.2.3 SQL is Essential for Business Operations
+
+---
+
+Businesses depend on SQL for:
+
+| Business Area | SQL Usage |
+|---|---|
+| Finance | Revenue tracking |
+| Marketing | Customer analytics |
+| Operations | Inventory management |
+| HR | Employee systems |
+| Security | User authentication |
+
+Without SQL:
+
+- Reports become inaccurate
+- Systems become unreliable
+- Business decisions become difficult
+
+---
+
+### 1.1.2.4 SQL is a Universal Skill
+
+---
+
+SQL is used by many roles.
+
+| Role | Why SQL is Needed |
+|---|---|
+| Backend Developer | Store application data |
+| Data Analyst | Analyze business data |
 | Data Engineer | Build pipelines |
 | DBA | Manage databases |
+| BI Developer | Build dashboards |
 | ML Engineer | Prepare datasets |
-| BI Developer | Create dashboards |
+
+SQL is considered one of the most valuable technical skills.
 
 ---
 
-> 💡 Beginner Note
->
-> Even if applications use ORM tools like:
->
-> - Prisma
-> - Hibernate
-> - Django ORM
->
-> SQL knowledge is still extremely important.
+### 1.1.2.5 SQL is Easy to Learn
 
 ---
 
-## Key Takeaway
+Compared to many programming languages:
 
-SQL powers modern software systems and business operations.
+| Technology | Difficulty |
+|---|---|
+| SQL | Beginner-friendly |
+| C++ | Complex |
+| Java | Moderate |
+| Assembly | Very difficult |
+
+SQL syntax is readable.
+
+Example:
+
+```sql
+SELECT * FROM products;
+```
+
+This is close to human language.
 
 ---
 
-# 1.4 SQL Use Cases
-
-SQL is used in nearly every industry.
+## 1.1.3 SQL Use Cases
 
 ---
 
-## E-Commerce Systems
+### 1.1.3.1 Application Data Storage
 
-SQL stores:
+---
 
-- products
-- orders
-- payments
-- customers
+Applications store user data using SQL.
 
 Examples:
 
-- Shopee
-- Amazon
-- Lazada
+| Application | Stored Data |
+|---|---|
+| Facebook | Users, posts |
+| Shopee | Orders, products |
+| Banking App | Accounts, transfers |
+| Food Delivery App | Restaurants, drivers |
 
 ---
 
-## Banking Systems
+### 1.1.3.2 Reporting and Analytics
 
-SQL stores:
+---
 
-- balances
-- transfers
-- transaction history
+Businesses generate reports using SQL.
 
 Examples:
 
-- Maybank
-- CIMB
-- Public Bank
+| Report Type | SQL Usage |
+|---|---|
+| Monthly sales | Revenue aggregation |
+| Customer trends | User analysis |
+| Inventory reports | Stock tracking |
+| Financial reports | Profit calculation |
 
 ---
 
-## Healthcare Systems
-
-SQL stores:
-
-- patient records
-- appointments
-- billing
-- prescriptions
+### 1.1.3.3 Authentication Systems
 
 ---
 
-## Education Systems
+SQL databases store:
 
-SQL stores:
+- User accounts
+- Password hashes
+- Roles
+- Permissions
 
-- student registration
-- attendance
-- grades
+Example table:
+
+| user_id | username | role |
+|---|---|---|
+| 1 | admin | administrator |
 
 ---
 
-## Social Media Systems
+### 1.1.3.4 Transaction Systems
 
-SQL stores:
+---
 
-- users
-- posts
-- comments
-- messages
+SQL is heavily used in transactions.
 
 Examples:
 
-- Facebook
-- Instagram
+| System | Transaction Type |
+|---|---|
+| ATM | Money withdrawal |
+| E-Commerce | Payment processing |
+| Airline Booking | Ticket reservation |
+
+Transactions ensure:
+
+- Accuracy
+- Reliability
+- Data consistency
 
 ---
 
-## Logistics Systems
+### 1.1.3.5 Data Warehousing
 
-SQL stores:
+---
 
-- deliveries
-- drivers
-- tracking records
+Companies collect historical data for analysis.
+
+SQL is used to:
+
+- Aggregate data
+- Build dashboards
+- Create KPIs
+- Generate insights
+
+---
+
+## 1.1.4 SQL vs Programming Languages
+
+---
+
+### 1.1.4.1 Main Difference
+
+---
+
+| SQL | Programming Languages |
+|---|---|
+| Focuses on data | Focuses on application logic |
+| Declarative | Procedural/Object-oriented |
+| Queries databases | Builds software |
+| Asks WHAT to retrieve | Explains HOW to execute |
+
+---
+
+### 1.1.4.2 SQL is Declarative
+
+---
+
+In SQL:
+
+You describe:
+
+- What you want
+
+You usually do not describe:
+
+- Step-by-step execution process
+
+Example:
+
+```sql
+SELECT * FROM employees;
+```
+
+You ask for data.
+
+The database engine decides:
+
+- How to retrieve it efficiently
+
+---
+
+### 1.1.4.3 Programming Languages are Procedural
+
+---
+
+Languages like:
+
+- Python
+- Java
+- C++
+- JavaScript
+
+Usually involve:
+
+- Variables
+- Loops
+- Functions
+- Algorithms
+- Memory management
+
+Example in Python:
+
+```python
+for employee in employees:
+    print(employee)
+```
+
+This explicitly defines execution flow.
+
+---
+
+### 1.1.4.4 SQL and Programming Languages Work Together
+
+---
+
+Modern systems combine both.
+
+Example architecture:
+
+| Component | Technology |
+|---|---|
+| Frontend | React |
+| Backend | Node.js |
+| Database | PostgreSQL |
+| Query Language | SQL |
+
+Workflow:
+
+1. User clicks button
+2. Backend receives request
+3. Backend sends SQL query
+4. Database returns result
+5. Backend sends response to frontend
+
+---
+
+## 1.1.5 SQL vs NoSQL
+
+---
+
+### 1.1.5.1 SQL Databases
+
+---
+
+SQL databases use:
+
+- Tables
+- Rows
+- Columns
+- Relationships
 
 Examples:
 
-- Grab
-- Foodpanda
+| SQL Database |
+|---|
+| MySQL |
+| PostgreSQL |
+| Oracle |
+| SQL Server |
 
 ---
 
-## Example Query
+### 1.1.5.2 NoSQL Databases
+
+---
+
+NoSQL databases use flexible structures.
+
+Examples:
+
+| NoSQL Type | Example |
+|---|---|
+| Document DB | MongoDB |
+| Key-Value DB | Redis |
+| Column DB | Cassandra |
+| Graph DB | Neo4j |
+
+---
+
+### 1.1.5.3 Core Differences
+
+---
+
+| Feature | SQL | NoSQL |
+|---|---|---|
+| Structure | Fixed schema | Flexible schema |
+| Relationships | Strong relationships | Often weaker relationships |
+| Scalability | Vertical scaling | Horizontal scaling |
+| Consistency | Strong consistency | Flexible consistency |
+| Query Language | SQL | Database-specific |
+
+---
+
+### 1.1.5.4 When SQL is Better
+
+---
+
+SQL is better for:
+
+| Scenario | Reason |
+|---|---|
+| Banking | Strong consistency |
+| Transactions | ACID support |
+| Reporting | Complex joins |
+| Structured systems | Organized schema |
+
+---
+
+### 1.1.5.5 When NoSQL is Better
+
+---
+
+NoSQL is useful for:
+
+| Scenario | Reason |
+|---|---|
+| Real-time caching | Fast retrieval |
+| Flexible documents | Dynamic structure |
+| Massive scaling | Distributed systems |
+| Event logging | High write throughput |
+
+---
+
+## 1.1.6 SQL in Modern Applications
+
+---
+
+### 1.1.6.1 SQL is Everywhere
+
+---
+
+Modern applications heavily rely on SQL.
+
+Examples:
+
+| Application Type | SQL Usage |
+|---|---|
+| Mobile apps | User data |
+| Websites | Product catalog |
+| SaaS platforms | Subscription systems |
+| Enterprise systems | Internal operations |
+
+---
+
+### 1.1.6.2 Modern Architectures
+
+---
+
+SQL works with:
+
+- Microservices
+- APIs
+- Cloud systems
+- Containerized applications
+- Kubernetes
+- Serverless applications
+
+---
+
+### 1.1.6.3 SQL in Cloud Computing
+
+---
+
+Cloud providers offer managed SQL services.
+
+Examples:
+
+| Cloud Provider | SQL Service |
+|---|---|
+| AWS | RDS |
+| Google Cloud | Cloud SQL |
+| Azure | Azure SQL |
+| Snowflake | Cloud warehouse |
+
+Benefits:
+
+- Automatic backups
+- Scalability
+- Security
+- High availability
+
+---
+
+## 1.1.7 SQL for Backend Development
+
+---
+
+### 1.1.7.1 Backend Systems Depend on SQL
+
+---
+
+Backend developers use SQL to:
+
+- Store users
+- Manage authentication
+- Process orders
+- Save application data
+
+---
+
+### 1.1.7.2 Common Backend Workflow
+
+---
+
+Typical flow:
+
+1. User submits request
+2. Backend validates request
+3. Backend executes SQL query
+4. Database returns data
+5. Backend returns API response
+
+---
+
+### 1.1.7.3 Example Backend Query
+
+---
 
 ```sql
 SELECT *
@@ -492,507 +682,186 @@ FROM orders
 WHERE customer_id = 1001;
 ```
 
+This retrieves customer orders.
+
 ---
 
-## Query Explanation
+## 1.1.8 SQL for Data Engineering
 
-| SQL Part | Meaning |
+---
+
+### 1.1.8.1 What is Data Engineering
+
+---
+
+Data engineering focuses on:
+
+- Moving data
+- Cleaning data
+- Transforming data
+- Building pipelines
+
+---
+
+### 1.1.8.2 SQL in ETL Pipelines
+
+---
+
+ETL means:
+
+| Term | Meaning |
 |---|---|
-| `SELECT *` | Select all columns |
-| `FROM orders` | Read from orders table |
-| `WHERE customer_id = 1001` | Filter one customer |
+| E | Extract |
+| T | Transform |
+| L | Load |
 
----
-
-## Key Takeaway
-
-SQL exists in almost every major software system today.
-
----
-
-# 1.5 SQL vs Programming Languages
-
-Many beginners confuse SQL with programming languages.
-
-They are different technologies with different purposes.
-
----
-
-## SQL
-
-SQL is a declarative language.
-
-You tell the database:
-
-> WHAT you want
+SQL is heavily used during transformation.
 
 Example:
 
 ```sql
-SELECT name
-FROM employees;
-```
-
-The database decides HOW to retrieve the data.
-
----
-
-## Programming Languages
-
-Examples:
-
-- Python
-- Java
-- JavaScript
-- C++
-
-Programming languages tell the computer:
-
-> HOW to perform tasks
-
-Example:
-
-```python
-for employee in employees:
-    print(employee.name)
+SELECT
+    customer_id,
+    SUM(total_amount) AS total_sales
+FROM orders
+GROUP BY customer_id;
 ```
 
 ---
 
-## Comparison Table
-
-| Feature | SQL | Programming Languages |
-|---|---|---|
-| Type | Declarative | Procedural/OOP |
-| Focus | Data | Application Logic |
-| Usage | Database operations | Application development |
-| Example | SQL | Python |
+### 1.1.8.3 Data Warehouse Processing
 
 ---
 
-## Real-World Workflow
+Data engineers use SQL for:
 
-```text
-Frontend Receives User Input
-             ↓
-Backend Processes Logic
-             ↓
-SQL Retrieves Database Data
-             ↓
-Backend Returns Response
-             ↓
-Frontend Displays Result
+- Aggregation
+- Data cleaning
+- Data normalization
+- Reporting datasets
+
+---
+
+## 1.1.9 SQL for Analytics
+
+---
+
+### 1.1.9.1 SQL is Core to Analytics
+
+---
+
+Analysts use SQL to:
+
+- Analyze trends
+- Build reports
+- Generate KPIs
+- Create dashboards
+
+---
+
+### 1.1.9.2 Example Analytical Query
+
+---
+
+```sql
+SELECT
+    product_category,
+    SUM(sales) AS total_sales
+FROM sales_data
+GROUP BY product_category;
 ```
 
----
-
-## Key Takeaway
-
-SQL manages data.
-
-Programming languages build applications.
+This calculates total sales by category.
 
 ---
 
-# 1.6 SQL vs NoSQL
-
-Many beginners ask:
-
-> Which is better?
-
-Correct question:
-
-> Which one fits the problem?
+### 1.1.9.3 BI Tools Using SQL
 
 ---
 
-## SQL Databases
-
-Examples:
-
-- PostgreSQL
-- MySQL
-- Oracle
-- SQL Server
-
-Best for:
-
-- banking
-- ERP systems
-- transactional systems
-
----
-
-## NoSQL Databases
-
-Examples:
-
-- MongoDB
-- Redis
-- Cassandra
-- DynamoDB
-
-Best for:
-
-- caching
-- flexible documents
-- distributed systems
-
----
-
-## Comparison Table
-
-| Feature | SQL | NoSQL |
-|---|---|---|
-| Schema | Fixed | Flexible |
-| Relationships | Strong | Limited |
-| Transactions | Strong ACID | Varies |
-| Scaling | Vertical | Horizontal |
-
----
-
-## Real Company Architecture Example
-
-Modern companies often combine databases:
-
-| Technology | Usage |
+| Tool | SQL Usage |
 |---|---|
-| PostgreSQL | Orders |
-| Redis | Caching |
-| MongoDB | Product Catalog |
+| Power BI | Data retrieval |
+| Tableau | Dashboard queries |
+| Looker | Analytical modeling |
+| Metabase | Reporting |
 
 ---
 
-> 💡 Beginner Note
->
-> SQL and NoSQL are not enemies.
->
-> Modern systems often use both together.
+## 1.1.10 SQL for Machine Learning Pipelines
 
 ---
 
-## Key Takeaway
-
-Different databases solve different problems.
+### 1.1.10.1 SQL Prepares ML Data
 
 ---
 
-# 1.7 SQL in Modern Applications
+Machine learning requires clean datasets.
 
-SQL exists almost everywhere in modern systems.
+SQL helps:
 
----
-
-## Streaming Platforms
-
-Stores:
-
-- subscriptions
-- watch history
-- payments
-
-Example:
-
-- Netflix
+- Filter data
+- Aggregate features
+- Remove duplicates
+- Handle missing values
 
 ---
 
-## Ride-Hailing Apps
-
-Stores:
-
-- riders
-- drivers
-- trip records
-
-Example:
-
-- Grab
+### 1.1.10.2 Typical ML Data Pipeline
 
 ---
 
-## Banking Apps
+Workflow:
 
-Stores:
-
-- balances
-- transfers
-- transactions
-
----
-
-## Government Systems
-
-Stores:
-
-- tax records
-- identity information
-- licenses
+1. Raw data collected
+2. SQL cleans data
+3. Features are generated
+4. Dataset exported
+5. ML model training starts
 
 ---
 
-## E-Commerce Apps
-
-Stores:
-
-- products
-- orders
-- payments
+### 1.1.10.3 Example Feature Engineering Query
 
 ---
-
-## Key Takeaway
-
-Most applications rely on SQL somewhere in their architecture.
-
----
-
-# 1.8 SQL for Backend Development
-
-Backend developers use SQL constantly.
-
----
-
-## What is Backend?
-
-Backend is the system users cannot directly see.
-
----
-
-## Frontend
-
-Visible to users:
-
-- buttons
-- forms
-- pages
-
----
-
-## Backend
-
-Handles:
-
-- business logic
-- authentication
-- database communication
-
----
-
-## Login Workflow Example
-
-```text
-User Enters Email/Password
-              ↓
-Backend Receives Request
-              ↓
-SQL Query Sent To Database
-              ↓
-Database Returns User Record
-              ↓
-Backend Verifies Password
-              ↓
-User Successfully Logs In
-```
-
----
-
-## SQL Example
 
 ```sql
-SELECT *
-FROM users
-WHERE email = 'john@gmail.com';
+SELECT
+    customer_id,
+    COUNT(order_id) AS total_orders,
+    SUM(total_amount) AS lifetime_value
+FROM orders
+GROUP BY customer_id;
 ```
+
+This creates ML features.
 
 ---
 
-## Backend Tools
+### 1.1.10.4 SQL + Python Workflow
 
-| Language | ORM Tool |
+---
+
+Modern ML systems often combine:
+
+| Purpose | Technology |
 |---|---|
-| Python | Django ORM |
-| Node.js | Prisma |
-| Java | Hibernate |
-| C# | Entity Framework |
+| Data extraction | SQL |
+| Model training | Python |
+| Visualization | Python |
+| Storage | SQL databases |
 
 ---
 
-## Key Takeaway
-
-Backend systems constantly interact with SQL databases.
+### 1.1.10.5 Beginner Mistakes in ML SQL
 
 ---
 
-# 1.9 SQL for Data Engineering
-
-Data engineers move and transform large amounts of data.
-
----
-
-## Responsibilities
-
-- move data
-- clean data
-- transform data
-- build pipelines
+| Mistake | Problem |
+|---|---|
+| Ignoring missing values | Poor model quality |
+| Using dirty data | Incorrect predictions |
+| Forgetting normalization | Model instability |
+| Duplicate records | Biased training |
 
 ---
-
-## Example Workflow
-
-```text
-Application Generates Raw Data
-               ↓
-Data Engineer Extracts Data
-               ↓
-SQL Cleans/Transforms Data
-               ↓
-Data Loaded Into Warehouse
-               ↓
-Business Team Uses Reports
-```
-
----
-
-## SQL Example
-
-```sql
-INSERT INTO warehouse_sales
-SELECT *
-FROM app_sales;
-```
-
----
-
-## Common Tools
-
-- Snowflake
-- BigQuery
-- Redshift
-- dbt
-- Airflow
-
----
-
-## Key Takeaway
-
-SQL is heavily used in data pipelines and warehousing systems.
-
----
-
-# 1.10 SQL for Analytics
-
-SQL is the primary language used in analytics.
-
----
-
-## Business Questions SQL Helps Answer
-
-- Which product sells most?
-- Why did sales drop?
-- Which customers spend most?
-- Which marketing campaign performs best?
-
----
-
-## SQL Example
-
-```sql
-SELECT SUM(revenue)
-FROM orders;
-```
-
----
-
-## Output
-
-Returns total company revenue.
-
----
-
-## BI Tools
-
-- Tableau
-- Power BI
-- Looker
-
----
-
-## Key Takeaway
-
-SQL helps businesses make data-driven decisions.
-
----
-
-# 1.11 SQL for Machine Learning Pipelines
-
-Many beginners think machine learning only uses Python.
-
-That is incomplete.
-
-SQL is heavily used before model training.
-
----
-
-## Machine Learning Workflow
-
-```text
-Collect Raw Data
-        ↓
-Clean Data Using SQL
-        ↓
-Create Features
-        ↓
-Prepare Training Dataset
-        ↓
-Train Machine Learning Model
-```
-
----
-
-## SQL Example
-
-```sql
-SELECT customer_id,
-       total_orders,
-       total_spending
-FROM customer_features;
-```
-
----
-
-## Real Use Cases
-
-- fraud detection
-- recommendation systems
-- customer churn prediction
-
----
-
-## Platforms
-
-- BigQuery ML
-- Snowflake
-- Databricks
-
----
-
-## Key Takeaway
-
-SQL prepares clean structured data for machine learning systems.
-
----
-
-# 1.12 Final Summary
-
-After completing this section, beginners should understand:
-
-- what SQL is
-- why SQL matters
-- where SQL is used
-- how SQL works
-- how SQL connects with applications
-- how SQL supports analytics and machine learning
-
-This foundation prepares learners for more advanced SQL topics later.
