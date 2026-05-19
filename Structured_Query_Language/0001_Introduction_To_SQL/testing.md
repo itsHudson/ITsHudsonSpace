@@ -38,8 +38,6 @@ SQL is mainly used with:
 
 ### 1.1.1.2 What is a Database
 
----
-
 A database is an organized collection of data stored electronically.
 
 Real-world examples:
@@ -62,8 +60,6 @@ Without databases:
 ---
 
 ### 1.1.1.3 What is a Relational Database
-
----
 
 A relational database stores data in tables.
 
