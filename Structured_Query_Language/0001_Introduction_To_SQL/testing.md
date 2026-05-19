@@ -4,8 +4,6 @@
 
 ## 1.1.1 What is SQL
 
----
-
 ### 1.1.1.1 Definition of SQL
 
 ---
